@@ -1,0 +1,196 @@
+.main-sec{
+    background-image: url(../assets/images/login/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 45px 0 0px;
+    position: relative;
+    height: 100vh;
+}
+#bottom-login .logo img{
+    width: 30%;
+    display: inline-block;
+}
+
+.logo img{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+#bottom-login{
+    position:fixed;
+    background: #0E91D4;
+    padding: 10px 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.logo-text p{
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+.login-form {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.login-form h1{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+}
+.formgroup{
+    transition: .5s all;
+    position: relative;
+}
+.formgroup input{
+    width: 100%;
+    padding:10px 13px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    margin-top: 15px;
+    color: #6f6f6f;
+    
+}
+
+.jobpoatmain input , select , .Multiselect{
+    outline: none;  
+    color: #000;  
+    border: 1px solid #ccc;  
+}
+
+input:focus{
+    /* outline: none; */
+    color: 1px solid;
+}
+.formgroup h6 input {
+    width:12%;
+    padding:5px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    margin-top: 4px;
+    margin-right: 3px;
+    color: #6f6f6f;
+}
+.formgroup h6{
+    margin:20px  0;
+}
+.formgroup h6 p{
+    margin: 0;
+}
+.formgroup h6 p span{
+    margin: 0;
+    font-size: 13px;
+    margin-top: -10px;
+    font-weight: 400;
+}
+.formgroup h6 a{
+    font-size: 13px;
+}
+.formgroup button{
+    background: #0E91D4;
+    width: 100%;
+    padding:9px 0px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+.loginor {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+.loginor span{
+font-size: 13px;
+font-weight: 500;
+color: #565656;
+}
+.loginor span::before{
+    position: absolute;
+    content: '';
+    width: 38%;
+    height: 1px;
+    background: #ddd;
+    left: 0;
+    top: 54%;
+}
+.loginor span::after{
+    position: absolute;
+    content: '';
+    width: 38%;
+    height: 1px;
+    background: #ddd;
+    right: 0;
+    top: 54%;
+}
+.login-icon a img{
+    width:35px;
+}
+.login-icon a{
+    overflow: hidden;
+    margin: 0 10px;
+}
+.login-sig {
+    margin-top: 20px;
+}
+.login-sig p{
+    font-size: 13px;
+    font-weight: 500;
+    color: #6f6f6f;
+}
+.login-sig p a{
+    font-size: 12px;
+    color: #343434;
+    font-weight:700;
+    text-decoration: none;
+}
+.social-icon a{
+    font-size: 25px;
+}
+
+.formgroupp{
+    position: relative;
+    margin: 10px 0;
+}
+.checkboxContainer{
+    font-size: 13px;
+    font-weight: 500;
+    color: #565656;
+}
+.checkboxContainer a{
+    padding-left: 4px;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+.resendbtn button{
+    background-color: transparent;
+    border: none;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+}
+.veri-para{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #5a5a5a;
+}
+.login-form .formgroup svg{
+    width: 15px;
+    top: 48%;
+    position: absolute;
+    right: 10px;
+    color:#75757E;
+}

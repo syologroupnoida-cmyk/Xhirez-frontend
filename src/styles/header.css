@@ -1,0 +1,22 @@
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+.head-btn{
+    font-size: 17px;
+    font-weight: 500;
+    color: #9b9b9b;
+    text-decoration: none;
+
+
+}
+.head-btn .icon{
+    padding-right: 10px;
+}
+.navbar{
+    background:#ECF4FF;
+}
+
+

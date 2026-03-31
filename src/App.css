@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #6B7280;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+
+body {
+    background-color: #fff !important;
+    font-family: 'Roboto', sans-serif !important;
+
+}
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+@media (max-width: 769px) {
+    .banner-content {
+        padding-top: 50px !important;
+    }
+    .custom-layout {
+      
+        height: 450px !important;
+    }
+    .sector-content{
+        text-align: center;
+    }
+    .sector-content h2::before {
+        left: 44%;
+    }
+    .sector-section {
+        padding: 51px 0 30px !important;
+    }
+    .how-head p {
+        font-size: 14px !important;
+    }
+    .how-head h3 {
+        font-size: 33px !important;
+    }
+   
+    .tab-content {
+        padding-top: 0px !important;
+    }
+    .job-box{
+        position: relative;
+    }
+    .job-time{
+        position: absolute !important;
+        top: 0;
+        right: 10px;
+    }
+    .browaw-content{
+        padding-bottom: 30px;
+    }
+    
+    
+
+    .links-content a {
+        gap: 7px;
+        width: 50% !important;
+    }
+    .links-content a p {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .app-download {
+        gap: 10px !important;
+        display: flex
+    ;
+    }
+    .links-content p {
+        font-size: 16px !important; 
+        width: 100% !important;
+    }
+    .applinks {
+        padding-top: 50px !important;
+        background: #ECF4FF;
+        margin-bottom: 50px;
+    }
+    .links-content a p {
+        font-size: 13px !important; 
+        width: 100% !important;
+    }
+    .footer {
+        padding: 0px 0 0px !important;
+    }
+    .footer-box{
+        margin-top: 20px;
+    }
+    .bussiness-banner {
+        background-image:none !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background: #ECF4FF !important;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+    .bostbus-head h3 {
+        font-size: 22px !important;
+    }
+    .bostbus-head {
+        margin-bottom: 0px !important; 
+    }
+    .techno-text p {
+        font-size: 14px !important;
+        margin-bottom: 26px !important;
+        line-height: 21px !important;
+    }
+    .techno-text h3 {
+        font-size: 16px !important;
+        line-height: 23px !important;
+        margin-bottom: 1px !important;
+    }
+    .bussiness-banner .banner-content a {
+        padding: 11px 18px !important;
+        font-size: 13px !important;
+    }
+    .bussiness-banner .banner-content p {
+        font-size: 13px !important;
+        margin-bottom: 25px !important;
+    }
+    .bussiness-banner .banner-content h2 {
+        font-size: 20px !important;
+        line-height: 26px !important;
+    }
+    .bostbox {
+        padding: 30px 20px 31px 20px !important;
+        background: #ECF4FF;
+        border-radius: 20px;
+        margin-top: 30px;
+        min-height: 200px;
+    }
+    .agency-banner {
+        background-image:none !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background: #ECF4FF !important;
+        height: 100% !important;
+        padding-bottom: 50px;
+    }
+    .agency-banner .banner-content a {
+        padding: 11px 18px !important;
+        font-size: 13px !important;
+    }
+    .agency-banner .banner-content p {
+        font-size: 13px !important;
+        margin-bottom: 25px !important;
+    }
+    .agency-banner .banner-content h2 {
+        font-size: 20px !important;
+        line-height: 26px !important;
+    }
+    .features-banner .banner-content a {
+        padding: 11px 18px !important;
+        font-size: 13px !important;
+    }
+    .features-banner {
+        background-image:none !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background: #ECF4FF !important;
+        height: 100% !important;
+        padding-bottom: 50px;
+    }
+    .features-banner .banner-content p {
+        font-size: 13px !important;
+        margin-bottom: 25px !important;
+    }
+    .features-banner .banner-content h2 {
+        font-size: 20px !important;
+        line-height: 26px !important;
+    }
+    .pagination {
+        font-size: 12px !important;
+      }
+    
+      .pagination .page-link {
+        padding: 5px 6px !important;
+    }
+      .job-listing nav{
+        background-color: #F8F9FA !important;
+      }
+
+      .qualification {
+        font-size: 13px !important;
+        font-weight: 500;
+        color: #8a8a8a;
+        margin-bottom: 10px !important;
+    }
+    
+    .boxtab span {
+        font-size: 11px !important;
+    }
+    .sidelogo {
+        width: 40px;
+        overflow: hidden;
+        height:40px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: absolute;
+        right: 10px !important;
+        padding: 4px;
+        top: 10px !important;
+    }
+    .job-listing .card-body {
+        padding: 20px 10px !important;
+        position: relative;
+    }
+    .alljob {
+        padding: 39px 0px !important;
+    }
+    .job-listing {
+        padding: 34px 0px !important;
+        background-color: #F8F9FA;
+    }
+    .listing-banner {
+        background-image: none !important;
+        background:#ECF4FF ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100% !important;
+        padding-bottom: 40px;
+    }
+}
