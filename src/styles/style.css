@@ -2493,7 +2493,7 @@ padding: 3px 0;
     }
     
     .bussiness-banner {
-        background-image: url(/src/assets/images/banner/bussines-banner.jpg);
+        background-image: url(/assets/images/banner/bussines-banner.jpg);
         background-position: right;
         background-repeat: no-repeat;
         background-size: cover;

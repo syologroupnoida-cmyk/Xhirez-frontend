@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useParams, useNavigation  } from 'react-router-dom';
+import { Link, useLocation, useParams, useNavigation  } from "@/router-dom";
 import { FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faDownload,

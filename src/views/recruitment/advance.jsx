@@ -5,7 +5,7 @@ import Navbar from '../../components/header/recruitment-header';
 import Footer from '../../components/footer/footer';
 import { Container } from 'react-bootstrap';
 import axios from 'axios'; // Import axios for API calls
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "@/router-dom";
 import { API_ENDPOINTS } from '../apiConfig';
 import { toast, ToastContainer } from 'react-toastify';
 import { TagsInput } from "react-tag-input-component";

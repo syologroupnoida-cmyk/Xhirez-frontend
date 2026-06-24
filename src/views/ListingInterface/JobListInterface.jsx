@@ -6,7 +6,7 @@ import UnifiedHeader from '../../components/header/UnifiedHeader';
 import Footer from '../../components/footer/footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight, faAnglesLeft, faFilter } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 import { API_ENDPOINTS } from '../apiConfig';
 import { Spinner } from "react-bootstrap";
 import { toast, ToastContainer } from 'react-toastify';

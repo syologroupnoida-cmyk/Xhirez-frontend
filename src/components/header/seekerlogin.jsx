@@ -3,13 +3,12 @@ import { Navbar, Nav, NavDropdown, Container, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightToBracket, faUser, faBell, faSignOutAlt, faCog, faMagnifyingGlass, faTimes, faUserPlus, faEye, faDownload, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { Avatar, Paper } from "@mantine/core";
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 import Navlinks from './seekernavlink';
 import Topbar from './seekertopbar';
-import fabimage from '../../../public/assets/images/logo/Xhirez-Logo.png';
 import axios from 'axios';
 import { API_ENDPOINTS } from '../../views/apiConfig';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "@/router-dom";
 import AuthorizationHeader from '../../views/AuthorizationHeader';
 import { toast, ToastContainer } from 'react-toastify';
 
@@ -241,7 +240,7 @@ const Seekernavbar = () => {
       <ToastContainer/>
 
       {Topbar()}
-      <nav className="bg-[#ECF4FF] w-full max-w-full pt-1 md:!pt-0  relative md:flex justify-between h-16 items-center px-4 sm:px-8 md:px-12 lg:!px-[120px]">
+      <nav className="bg-[#ECF4FF] w-full max-w-full pt-1 md:!pt-0 relative md:flex justify-between h-16 items-center px-4 sm:px-8 md:px-12 lg:!px-[120px] rounded-[10px]">
         
         {isNavExpanded && (
           <div className="absolute top-16 left-0 py-6 px-4 w-full bg-white z-50 md:hidden">

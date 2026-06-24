@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../../components/header/recruitment-header';
 import Footer from '../../components/footer/footer';
 import Popup from '../recruitment/popup';
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 import { Container, Row, Col } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import Cookies from 'js-cookie';
 

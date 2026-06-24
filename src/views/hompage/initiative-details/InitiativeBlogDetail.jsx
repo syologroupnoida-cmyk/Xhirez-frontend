@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from "@/router-dom";
 import initiatives from '../../../data/initiativesData.js';
 import UnifiedHeader from '../../../components/header/UnifiedHeader';
 import Footer from '../../../components/footer/footer';

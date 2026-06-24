@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 import axios from "axios";
 import {
   Container,
@@ -572,28 +572,28 @@ const Profile = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <img src="assets/images/icon/facebook.png" width="100%" alt="Facebook" />
+                              <img src="/assets/images/icon/facebook.png" width="100%" alt="Facebook" />
                             </a>
                             <a
                               href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <img src="assets/images/icon/linkedin.png" width="100%" alt="LinkedIn" />
+                              <img src="/assets/images/icon/linkedin.png" width="100%" alt="LinkedIn" />
                             </a>
                             <a
                               href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=Check%20out%20this%20profile!`}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <img src="assets/images/icon/twitter.png" width="100%" alt="Twitter" />
+                              <img src="/assets/images/icon/twitter.png" width="100%" alt="Twitter" />
                             </a>
                             <a
                               href={`https://api.whatsapp.com/send?text=${shareUrl}`}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <img src="assets/images/icon/whatsapp.png" width="100%" alt="WhatsApp" />
+                              <img src="/assets/images/icon/whatsapp.png" width="100%" alt="WhatsApp" />
                             </a>
                           </div>
                         </div>

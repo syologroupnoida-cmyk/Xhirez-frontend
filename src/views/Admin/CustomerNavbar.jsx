@@ -14,7 +14,7 @@ const CustomNavbar = () => {
     >
       <Container responsive>
         <Navbar.Brand href="#" style={{ marginLeft: "90px" }}>
-         <Navbar.Brand href="/"><img src="assets/images/logo/Xhirez-Logo.png" width='150px' alt="logo" /></Navbar.Brand>
+         <Navbar.Brand href="/"><img src="/assets/images/logo/Xhirez-Logo.png" width='150px' alt="logo" /></Navbar.Brand>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav" style={{ marginLeft: "50px" }}>

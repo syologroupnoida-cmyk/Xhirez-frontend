@@ -3,7 +3,7 @@ import { Row, Col, Container} from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../../views/recruitment/recruiterlogin';
 import { faUserTie,faMagnifyingGlass, faTimes,  faPhoneVolume, faSearch, faMobileAlt, faHeadset} from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "@/router-dom";
 import axios from 'axios';
 import { API_ENDPOINTS } from '../../views/apiConfig';
 import AuthorizationHeader from '../../views/AuthorizationHeader';
@@ -127,7 +127,7 @@ const handleLocationSuggestionClick = (suggestion) => {
  
     return (
         <>
-          <div className="bg-[#ECF4FF] py-1 border-b ">
+          <div className="bg-[#ECF4FF] py-1 border-b rounded-[10px]">
           <Container>
           <Row className="items-center">
   {/* Left Column for Logo */}
@@ -135,8 +135,8 @@ const handleLocationSuggestionClick = (suggestion) => {
     <div className="flex justify-center md:justify-start items-center">
       <Link to="/">
         <img
-          src="../assets/images/logo/Xhirez-Logo.png"
-          alt="logo"
+          src="/assets/images/logo/Xhirez-Logo.png"
+          alt="Xhirez"
           className="w-48 sm:w-[162px]"
         />
       </Link>
@@ -173,7 +173,7 @@ const handleLocationSuggestionClick = (suggestion) => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="../assets/images/icon/playstore.png"
+                  src="/assets/images/icon/playstore.png"
                   alt="Download on the App Store"
                   className="w-full"
                 />
@@ -184,7 +184,7 @@ const handleLocationSuggestionClick = (suggestion) => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="../assets/images/icon/ios.png"
+                  src="/assets/images/icon/ios.png"
                   alt="Get it on Google Play"
                   className="w-full"
                 />

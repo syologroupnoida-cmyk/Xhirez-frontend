@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
   faPlay, 
@@ -30,7 +30,7 @@ const WhyChooseUsSection = () => {
               
               <div className="w-50 pt-12">
                 <img
-                  src="assets/images/main/why-first.jpg"
+                  src="/assets/images/banner/home-banner.jpg"
                   className="rounded-[40px] shadow-2xl w-full object-cover h-[450px]"
                   alt="Team working"
                 />
@@ -39,7 +39,7 @@ const WhyChooseUsSection = () => {
               
               <div className="w-50 d-flex flex-column gap-4">
                 <img
-                  src="assets/images/main/why-sec.jpg"
+                  src="/assets/images/feature/feature-banner.jpg"
                   className="rounded-[30px] shadow-xl w-full h-[200px] object-cover"
                   alt="Recruitment"
                 />
@@ -51,7 +51,7 @@ const WhyChooseUsSection = () => {
                     </div>
                   </div>
                   <img
-                    src="assets/images/main/why-ythird.jpg"
+                    src="/assets/images/foragency/banner-agency.jpg"
                     className="rounded-[30px] shadow-xl w-full h-[200px] object-cover"
                     alt="Video testimonial"
                   />

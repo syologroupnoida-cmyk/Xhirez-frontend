@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from "@/router-dom";
 import { Popover, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import { InformationCircleIcon } from '@heroicons/react/24/outline';

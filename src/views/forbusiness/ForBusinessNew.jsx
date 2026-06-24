@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link } from "@/router-dom";
+import { useNavigate } from "@/router-dom";
 import { 
   FaGraduationCap, FaLaptopCode, FaUserTie, FaRocket, 
   FaCheckCircle, FaBuilding, FaShieldAlt, FaChartBar 

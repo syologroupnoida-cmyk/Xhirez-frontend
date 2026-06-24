@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from "@/router-dom";
 import UnifiedHeader from '../../components/header/UnifiedHeader';
 import Footer from '../../components/footer/footer';
 import { ChevronRight, Lightbulb, Code, Users, Briefcase, Award } from 'lucide-react';

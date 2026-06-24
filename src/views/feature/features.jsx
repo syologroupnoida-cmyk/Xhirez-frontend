@@ -49,49 +49,49 @@ const Features = () => {
           <div className="row">
           <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/hiring.png" width={'35px'} alt="" />Hiring Marketplace</h4>
+                <h4><img src="/assets/images/feature/icon/hiring.png" width={'35px'} alt="" />Hiring Marketplace</h4>
              <p>Grow your business with instant access to the Xhirez hiring marketplace where clients post open positions--and you can too, especially if you'd like extra support recruiting for hard-to-find roles. Showcase your capabilities to new clients and get support on your own roles whenever needed</p>
                     </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/performing.png" width={'35px'} alt="" />Performance Tracking</h4>
+                <h4><img src="/assets/images/feature/icon/performing.png" width={'35px'} alt="" />Performance Tracking</h4>
          <p>Access reports that track your recruiters' activities, progress, and performance as well as your agency's overall success</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/reqution.png" width={'35px'} alt="" />Requisition Management</h4>
+                <h4><img src="/assets/images/feature/icon/reqution.png" width={'35px'} alt="" />Requisition Management</h4>
         <p>SetSet up your agency profile, manage your brand, and invite team members. You can also set up teams, manage recruiter account access-levels, and track individual performance</p>
                </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/recruiter.png" width={'35px'} alt="" />Recruitment Marketing</h4>
+                <h4><img src="/assets/images/feature/icon/recruiter.png" width={'35px'} alt="" />Recruitment Marketing</h4>
           <p>Empower every recruiter to market and promote the jobs you're working on with built-in social marketing features.</p>
                </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/applicant.png" width={'35px'} alt="" />Applicant Tracking</h4>
+                <h4><img src="/assets/images/feature/icon/applicant.png" width={'35px'} alt="" />Applicant Tracking</h4>
           <p>Track every candidate submission during the entire hiring lifecycle. ransparent workflows that reflect each employer's hiring process give you visibility on every candidate's progress and allow you to interact with stakeholders as needed throughout the hiring process</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/talent.png" width={'35px'} alt="" />Talent Pools</h4>
+                <h4><img src="/assets/images/feature/icon/talent.png" width={'35px'} alt="" />Talent Pools</h4>
              <p>Organize your candidate pools with tags, keep your teams up-to-date with notes, set follow-up reminders, and schedule interviews. Plus. our smart algorithms will notify you when your candidates match a new job opening in the hiring marketplace.</p>
                </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/employee.png" width={'35px'} alt="" />Employee Management</h4>
+                <h4><img src="/assets/images/feature/icon/employee.png" width={'35px'} alt="" />Employee Management</h4>
         <p>Xhiez can help agencies that require full employee management. including candidate onboarding, offer management. Employer of Record services, payroll, and compliance.</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/feature/icon/collabration.png" width={'35px'} alt="" />Communication and Collaboration</h4>
+                <h4><img src="/assets/images/feature/icon/collabration.png" width={'35px'} alt="" />Communication and Collaboration</h4>
              <p>Manage all your correspondence with your recruiting team members, hiring managers and candidates from one central place with our messaging system. Followup with hiring managers on candidates. schedule interviews, take notes, tag stakeholders in comments and more</p>
               </div>
             </div>
@@ -178,7 +178,7 @@ const Features = () => {
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-6 d-flex justify-content-center align-items-center ">
-              <img src="assets/images/feature/form-side.jpg" width={'100%'} alt="" />
+              <img src="/assets/images/feature/form-side.jpg" width={'100%'} alt="" />
             </div>
           </div>
         </div>

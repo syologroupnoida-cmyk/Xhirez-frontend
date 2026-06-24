@@ -4,8 +4,8 @@ import { Star, Edit, MapPin, Building2, Clock, BookmarkPlus, CheckCircle, Briefc
 import { FaDownload, FaFileExcel, FaSave, FaSpinner, FaFilter } from 'react-icons/fa';
 import Navbar from '../../components/header/recruitment-header';
 import Footer from '../../components/footer/footer';
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { Link } from "@/router-dom";
+import { useLocation } from "@/router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight, faAnglesLeft, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import 'swiper/css';

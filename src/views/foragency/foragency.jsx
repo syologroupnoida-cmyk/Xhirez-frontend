@@ -49,31 +49,31 @@ const Agency = () => {
           <div className="row">
           <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/foragency/icons/expand.png" width={'30px'} alt="" />Expand Your Funnel</h4>
+                <h4><img src="/assets/images/foragency/icons/expand.png" width={'30px'} alt="" />Expand Your Funnel</h4>
               <p>Gain access to new job opportunities daily--with ZERO business development effort. Upon registration you have immediate access to the Crowdstaffing hiring marketplace.</p>
                   </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/foragency/icons/get.png" width={'30px'} alt="" />Get Rewards for Performance</h4>
+                <h4><img src="/assets/images/foragency/icons/get.png" width={'30px'} alt="" />Get Rewards for Performance</h4>
           <p>Earn payments for every placement. The more you participate and the better you perform, the more job opportunities you will receive. plus, you can earn exclusive access to certain client opportunities</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/foragency/icons/moneti.png" width={'30px'} alt="" />Monetize Your Candidate Pool</h4>
+                <h4><img src="/assets/images/foragency/icons/moneti.png" width={'30px'} alt="" />Monetize Your Candidate Pool</h4>
           <p>Managing resumes, taking notes, and setting up appointments are standard in any applicant tracking system. But our tech goes a step further, bringing revenue opportunities directly to you and your recruiters.</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/foragency/icons/enjoy.png" width={'30px'} alt="" />Enjoy Carefree Placements</h4>
+                <h4><img src="/assets/images/foragency/icons/enjoy.png" width={'30px'} alt="" />Enjoy Carefree Placements</h4>
           <p>Once a candidate gets hired, you get paid within 10 days of when we collect payment from the client. Crowdstaffing can also manage the Employer of Record services</p>
               </div>
             </div>
             <div className="col-md-6">
               <div className="bostbox">
-                <h4><img src="assets/images/foragency/icons/brand.png" width={'30px'} alt="" />Represent Your Brand</h4>
+                <h4><img src="/assets/images/foragency/icons/brand.png" width={'30px'} alt="" />Represent Your Brand</h4>
           <p>Every employer and candidate that you interact with is a potential champion for your brand. Because we understand the value of your brand we've ensured that you can: customize your URL.</p>
               </div>
             </div>
@@ -160,7 +160,7 @@ const Agency = () => {
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-6 d-flex justify-content-center align-items-center ">
-              <img src="assets/images/foragency/form-side.jpg" width={'100%'} alt="" />
+              <img src="/assets/images/foragency/form-side.jpg" width={'100%'} alt="" />
             </div>
           </div>
         </div>

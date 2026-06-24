@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from "@/router-dom";
 import { faEnvelope, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import axios from 'axios';
@@ -153,7 +153,7 @@ const OTPVerificationPages = () => {
           <div className="row justify-content-center">
             <div className="col-md-8">
               <div className="logo text-start">
-                <img src="assets/images/logo/Xhirez-Logo.png" width="100%" alt="" />
+                <img src="/assets/images/logo/Xhirez-Logo.png" width="100%" alt="" />
               </div>
             </div>
 
@@ -217,7 +217,7 @@ const OTPVerificationPages = () => {
           <div className="row">
             <div className="col-md-4">
               <div className="logo text-center">
-                <img src="assets/images/logo/Xhirez-Logo-Background.png" width="100%" alt="" />
+                <img src="/assets/images/logo/Xhirez-Logo-Background.png" width="100%" alt="" />
               </div>
             </div>
             <div className="col-md-4 d-flex justify-content-center align-items-center">

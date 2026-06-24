@@ -75,7 +75,7 @@ const BrowseJobsSection = () => {
                 
                 <div className="relative z-10 rounded-[50px] overflow-hidden border-[8px] border-white/5 shadow-2xl rotate-[-2deg] hover:rotate-0 transition-all duration-700 group">
                   <img 
-                    src="assets/images/main/brows.jpg" 
+                    src="/assets/images/banner/recruitment.jpg" 
                     className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all" 
                     alt="Success Career" 
                   />
