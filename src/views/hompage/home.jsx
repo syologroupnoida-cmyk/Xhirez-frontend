@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link } from "@/router-dom";
+import { useNavigate } from "@/router-dom";
 import UnifiedHeader from '../../components/header/UnifiedHeader';
 import Footer from "../../components/footer/footer";
 import HeroSection from "./home-components/HeroSection/HeroSection";
@@ -230,6 +230,7 @@ const Hero = () => {
     <>
       <UnifiedHeader />
 
+      <main className="xh-home-page">
       <HeroSection query={query} location={location} handleInputChange={handleInputChange} handlePostChange={handlePostChange} handleSearch={handleSearch} detectLocation={detectLocation} handleSuggestionClick={handleSuggestionClick} handleLocationsSuggestionClick={handleLocationsSuggestionClick} suggestions={suggestions} locationSuggestions={locationSuggestions} keywords={keywords} setQuery={setQuery} />
 
       <ChooseSectorSection />
@@ -516,6 +517,7 @@ const Hero = () => {
 
 
 
+      </main>
       <Footer />
       <ToastContainer/>
     </>

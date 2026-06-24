@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
 import Sidebar from './SuperAdminSidebar';
 import TopNavbar from './TopNavbar';
 import { Toaster } from 'react-hot-toast';
 
-const SuperAdminDashboard = () => {
+const SuperAdminDashboard = ({ children }) => {
   const [activeModule, setActiveModule] = useState('dashboard');
 
   return (
@@ -29,7 +28,7 @@ const SuperAdminDashboard = () => {
             overflowY: 'auto',
           }}
         >
-          <Outlet />
+          {children}
         </Container>
       </div>
     </div>

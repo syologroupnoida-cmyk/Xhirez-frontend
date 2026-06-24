@@ -1,5 +1,4 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import {
   Navbar,
   Container,
@@ -72,7 +71,7 @@ const data = [
   },
 ];
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ children }) => {
   return (
     <div className="responsive">
      <CustomNavbar />
@@ -86,7 +85,7 @@ const AdminDashboard = () => {
 
         {/* Main Content */}
         <div style={{ flex: 1, padding: "20px", backgroundColor: "white" }} className="responsive">
-        <Outlet />
+        {children}
           {/* <MainContent /> */}
           {/* <ManageJobs /> */}
           {/* <JobPostingForm /> */}

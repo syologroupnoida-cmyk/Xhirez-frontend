@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "@/router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding, faPaperPlane, faBookmark, faUserCheck, faMapMarkerAlt, faSuitcase, faUserTie, faGraduationCap, faIndianRupee, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF, faTwitter, faWhatsapp, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Navbar from "../../components/header/seekerlogin";
 import Footer from "../../components/footer/footer";
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 import { API_BASE_URL, API_ENDPOINTS } from "../apiConfig";
 import { ToastContainer, toast } from 'react-toastify';
 import { Spinner } from "react-bootstrap";

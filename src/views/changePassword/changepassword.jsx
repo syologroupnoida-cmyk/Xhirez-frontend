@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from "@/router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
@@ -81,7 +81,7 @@ const ChangePasswordPage = () => {
                     <div className="row justify-content-center">
                         <div className="col-md-8">
                             <div className="logo text-start">
-                                <img src="assets/images/logo/Xhirez-Logo.png" width="100%" alt="Logo" />
+                                <img src="/assets/images/logo/Xhirez-Logo.png" width="100%" alt="Logo" />
                             </div>
                         </div>
 
@@ -137,7 +137,7 @@ const ChangePasswordPage = () => {
                     <div className="row">
                         <div className="col-md-4">
                             <div className="logo text-center">
-                                <img src="assets/images/logo/Xhirez-Logo-Background.png" width="100%" alt="Background Logo" />
+                                <img src="/assets/images/logo/Xhirez-Logo-Background.png" width="100%" alt="Background Logo" />
                             </div>
                         </div>
                         <div className="col-md-4 d-flex justify-content-center align-items-center">

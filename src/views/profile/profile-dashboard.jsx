@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"
+import { Link } from "@/router-dom"
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/router-dom";
 import {
   InformationCircleIcon,
   ArrowRightIcon,
@@ -564,7 +564,7 @@ const ProfileDashboard = () => {
                     <div className="space-y-6 shadow-sm rounded-lg ">
                       <div className="relative w-full rounded-lg overflow-hidden ">
                         <img
-                          src="assets/images/main/first-top.jpg"
+                          src="/assets/images/main/first-top.jpg"
                           alt="Banner Background"
                           className="w-full h-full object-cover"
                         />
@@ -584,7 +584,7 @@ const ProfileDashboard = () => {
                         <div className=" px-6 my-3 flex flex-col border-r items-center text-center">
                           <div className="mb-0">
                             <img
-                              src="assets/images/icon/target.gif"
+                              src="/assets/images/icon/target.gif"
                               alt="Target Icon"
                               width="100px"
                             />
@@ -600,7 +600,7 @@ const ProfileDashboard = () => {
                         <div className="s p-6 flex flex-col items-center text-center">
                           <div className="mb-0">
                             <img
-                              src="assets/images/icon/discrimination.gif"
+                              src="/assets/images/icon/discrimination.gif"
                               alt="Target Icon"
                               width="100px"
                             />
@@ -618,7 +618,7 @@ const ProfileDashboard = () => {
                       <div className="relative w-full rounded-lg overflow-hidden ">
                         {/* Background Image */}
                         <img
-                          src="assets/images/main/first-top.jpg" // Replace with your image URL
+                          src="/assets/images/main/first-top.jpg" // Replace with your image URL
                           alt="Banner Background"
                           className="w-full h-full object-cover"
                         />
@@ -1231,7 +1231,7 @@ const ProfileDashboard = () => {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src="assets/images/icon/playstore.png" // Apple Store image
+                          src="/assets/images/icon/playstore.png" // Apple Store image
                           alt="Download on the App Store"
                           className="w-full h-auto"
                         />
@@ -1244,7 +1244,7 @@ const ProfileDashboard = () => {
                         rel="noopener noreferrer"
                       >
                         <img
-                          src="assets/images/icon/ios.png" // Google Play image
+                          src="/assets/images/icon/ios.png" // Google Play image
                           alt="Get it on Google Play"
                           className="w-full h-auto"
                         />

@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/router-dom";
 
 const Navlinks = () => {
   const links = [
@@ -12,11 +12,13 @@ const Navlinks = () => {
 
   return (
     <>
-      <div className="flex gap-2 sm:gap-3  text-mine-shaft-300 z-0 h-full items-center md:space-x-6 pl-4">
+      <div className="flex gap-1 text-mine-shaft-300 z-0 h-full items-center">
         {links.map((link, index) => (
-          <div key={index} className={`${ location.pathname == "" + link.url? "border-[#06A2E4] text-[#06A2E4]" : "border-transparent"} border-t-[4px] py-3 px-4 items-center flex`}
+          <div
+            key={index}
+            className={`xh-nav-item ${location.pathname === link.url ? "is-active" : ""}`}
           >
-            <Link to={link.url}>
+            <Link to={link.url} className="xh-nav-link">
               {link.name}
             </Link>
           </div>

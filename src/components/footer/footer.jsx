@@ -6,7 +6,7 @@ import { faFacebook, faTwitter, faLinkedin, faInstagram, faAppStoreIos, faGoogle
 const Footer = () => {
   return (
     // Background changed to White with a subtle top border
-    <footer className="bg-white pt-24 pb-12 text-slate-500 border-t border-slate-100 overflow-hidden relative font-sans">
+    <footer className="xh-site-footer bg-white pt-24 pb-12 text-slate-500 border-t border-slate-100 overflow-hidden relative font-sans">
       
       {/* Decorative Light Gradients - Pure White par depth dene ke liye */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-50 rounded-full blur-[100px] -z-10 opacity-60"></div>
@@ -113,7 +113,7 @@ const Footer = () => {
                         "Surat", "Thane", "Vadodara", "Ghaziabad", "Faridabad", "Amritsar", "Ludhiana", "Kanpur", "Varanasi", "Agra",
                         "Meerut", "Allahabad", "Ranchi", "Bhubaneswar", "Guwahati", "Dehradun", "Mysuru", "Mangaluru", "Nashik", "Rajkot"
                       ].map((location, index) => (
-                        <a key={index} href={`/alljob?location=${encodeURIComponent(location)}`} className="text-sm font-medium text-slate-500 hover:text-[#07A1E3] hover:underline transition-colors no-underline">
+                        <a key={index} href={`/alljob?location=${encodeURIComponent(location)}`} className="xh-footer-job-link text-sm font-medium transition-colors">
                           View Jobs in {location}
                         </a>
                       ))}

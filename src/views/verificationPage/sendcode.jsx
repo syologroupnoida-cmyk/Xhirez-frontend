@@ -1,9 +1,9 @@
 // src/loginpage/loginPage.jsx
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "@/router-dom"; // Import useNavigate
 import "./varifycode";
 import "./sendcode";
-import { Link } from "react-router-dom";
+import { Link } from "@/router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -72,7 +72,7 @@ const Otpcodesent = () => {
             <div className="col-md-8">
               <div className="logo text-start">
                 <img
-                  src="assets/images/logo/Xhirez-Logo.png"
+                  src="/assets/images/logo/Xhirez-Logo.png"
                   width="100%"
                   alt=""
                 />
@@ -168,7 +168,7 @@ const Otpcodesent = () => {
             <div className="col-md-4">
               <div className="logo text-center">
                 <img
-                  src="assets/images/logo/Xhirez-Logo-Background.png"
+                  src="/assets/images/logo/Xhirez-Logo-Background.png"
                   width="100%"
                   alt=""
                 />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faMobileAlt, faHeadset, faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 
 const Recruitmenttopbar = () => {
   const [location, setLocation] = useState('');
@@ -81,7 +81,7 @@ const Recruitmenttopbar = () => {
   };
 
   return (
-    <div className="bg-[#ECF4FF] py-2 border-b">
+    <div className="bg-[#ECF4FF] py-2 border-b rounded-[10px]">
       <Container>
         <Row className="flex items-center justify-between">
           <Col xs={12} sm={6} md={4} className="mb-2 hidden sm:block sm:mb-0">
@@ -124,7 +124,7 @@ const Recruitmenttopbar = () => {
                           rel="noopener noreferrer"
                         >
                           <img
-                            src="../assets/images/icon/playstore.png"
+                            src="/assets/images/icon/playstore.png"
                             alt="Download on the App Store"
                             className="w-full"
                           />
@@ -135,7 +135,7 @@ const Recruitmenttopbar = () => {
                           rel="noopener noreferrer"
                         >
                           <img
-                            src="../assets/images/icon/ios.png"
+                            src="/assets/images/icon/ios.png"
                             alt="Get it on Google Play"
                             className="w-full"
                           />

@@ -92,7 +92,7 @@ const HowToStartSection = () => {
               
               <div className="relative z-10 rounded-[60px] overflow-hidden border-[15px] border-white shadow-2xl rotate-3 hover:rotate-0 transition-all duration-700">
                 <img 
-                  src="assets/images/main/simple.jpg" 
+                  src="/assets/images/banner/bussines-banner.jpg" 
                   className="w-full h-[550px] object-cover" 
                   alt="Career Success" 
                 />

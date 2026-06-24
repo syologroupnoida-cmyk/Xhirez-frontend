@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Offcanvas } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "@/router-dom";
 import {
   FaUserCircle,
   FaBriefcase,

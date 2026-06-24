@@ -58,7 +58,7 @@ const Shecancode = () => {
           </motion.div>
           <div className="relative group">
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-[3rem] blur-2xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <img src="assets/images/shecancode/background.jpg" className="relative rounded-[3rem] shadow-xl z-10 grayscale-[30%] hover:grayscale-0 transition-all duration-700" alt="Workshops" />
+            <img src="/assets/images/shecancode/background.jpg" className="relative rounded-[3rem] shadow-xl z-10 grayscale-[30%] hover:grayscale-0 transition-all duration-700" alt="Workshops" />
           </div>
         </div>
       </section>

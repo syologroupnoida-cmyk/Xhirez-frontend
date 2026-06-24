@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaEdit, FaTrashAlt, FaEye, FaRegBookmark, FaMapMarkerAlt, FaMoneyBillWave, FaUsers } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 import Navbar from '../../components/header/recruitment-header';
 import Footer from '../../components/footer/footer';
 import { Container, Row, Col, Breadcrumb, Modal, Button, Card, Spinner, Pagination } from 'react-bootstrap';
 import axios from "axios";
 import { API_ENDPOINTS } from "../apiConfig";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import AuthorizationHeader from "../AuthorizationHeader";
 

@@ -48,8 +48,7 @@ const HeroSection = ({ query, location, handleInputChange, handlePostChange, han
   }, []);
 
   return (
-    /* mt-[125px] lagaya hai taaki header se na phase */
-    <div id="hero" className="relative h-[550px] md:h-[600px] mt-20 overflow-hidden bg-black">
+    <div id="hero" className="relative h-[560px] md:h-[620px] mt-[94px] overflow-hidden bg-black">
       
       {/* --- BACKGROUND IMAGES WITH SMOOTH CROSS-FADE --- */}
       {slides.map((slide, i) => (
@@ -92,30 +91,30 @@ const HeroSection = ({ query, location, handleInputChange, handlePostChange, han
 
         {/* --- STATIC SEARCH BAR --- */}
         <div className="w-full max-w-3xl mx-auto">
-          <div className="bg-white p-2 rounded-2xl md:rounded-full shadow-2xl border border-white/10">
+          <div className="xh-hero-search bg-white shadow-2xl border border-white/10">
             <Form className="flex flex-col md:flex-row items-center gap-1">
               
               <div className="relative flex-[1.3] w-full">
-                <FontAwesomeIcon icon={faBriefcase} className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FontAwesomeIcon icon={faBriefcase} className="xh-search-icon absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" />
                 <Form.Control
                   type="text"
                   placeholder="Job title or Skills"
                   value={query}
                   onChange={handleInputChange}
-                  className="!border-none !shadow-none h-12 pl-14 text-sm font-bold text-gray-700 bg-transparent"
+                  className="xh-search-input !border-none !shadow-none h-12 text-sm font-bold text-gray-700 bg-transparent"
                 />
               </div>
 
               <div className="hidden md:block w-px h-8 bg-gray-200"></div>
 
               <div className="relative flex-1 w-full">
-                <FontAwesomeIcon icon={faLocationDot} className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" />
+                <FontAwesomeIcon icon={faLocationDot} className="xh-search-icon absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" />
                 <Form.Control
                   type="text"
                   placeholder="Location"
                   value={location}
                   onChange={handlePostChange}
-                  className="!border-none !shadow-none h-12 pl-14 text-sm font-bold text-gray-700 bg-transparent"
+                  className="xh-search-input xh-search-input-location !border-none !shadow-none h-12 text-sm font-bold text-gray-700 bg-transparent"
                 />
                 <button type="button" onClick={detectLocation} className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-600 hover:scale-110 transition">
                   <FontAwesomeIcon icon={faLocationCrosshairs} />
@@ -124,7 +123,7 @@ const HeroSection = ({ query, location, handleInputChange, handlePostChange, han
 
               <Button 
                 onClick={handleSearch}
-                className="w-full md:w-auto px-10 h-12 !bg-blue-600 hover:!bg-blue-700 !rounded-xl md:!rounded-full !border-none font-bold text-base shadow-lg transition-all"
+                className="w-full md:w-auto px-10 h-12 !bg-blue-600 hover:!bg-blue-700 !rounded-full !border-none font-bold text-base shadow-lg transition-all"
               >
                 Search <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-xs" />
               </Button>
@@ -137,7 +136,7 @@ const HeroSection = ({ query, location, handleInputChange, handlePostChange, han
               <button
                 key={i}
                 onClick={() => setQuery(kw)}
-                className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-bold text-white hover:bg-white hover:text-black transition-all backdrop-blur-sm"
+                className="xh-hero-keyword px-4 py-1.5 bg-white/5 border border-white/10 text-xs font-bold text-white hover:bg-white hover:text-black transition-all backdrop-blur-sm"
               >
                 {kw}
               </button>

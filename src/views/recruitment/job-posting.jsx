@@ -10,7 +10,7 @@ import { faArrowRight, faCaretDown, faArrowLeft } from '@fortawesome/free-solid-
 import { Spinner } from "react-bootstrap";
 import Select from "react-select";
 import { toast, ToastContainer } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/router-dom";
 import AuthorizationHeader from "../AuthorizationHeader";
 
 const Jobpost = (prop) => {
@@ -450,7 +450,7 @@ const Jobpost = (prop) => {
                 {currentStep === 1 && (
                   <div>
                     <div className="relative mb-5 pb-20 sm:pb-5 border-b overflow-hidden">
-                      <img src="assets/images/jobpost/company-detail.jpg" className="rounded-2xl" width={'100%'} alt="" />
+                      <img src="/assets/images/jobpost/company-detail.jpg" className="rounded-2xl" width={'100%'} alt="" />
                       <h3 className="absolute  top-5 sm:!top-14 w-1/2 sm:!w-1/2 left-7 text-black font-semibold capitalize text-sm sm:!text-2xl">
                         Enter job and company details
                       </h3>
@@ -648,7 +648,7 @@ const Jobpost = (prop) => {
                 {currentStep === 2 && (
                   <div>
                     <div className="relative mb-5 pb-20 sm:pb-5 border-b overflow-hidden">
-                      <img src="assets/images/jobpost/step2.jpg" className="rounded-2xl" width={'100%'} alt="" />
+                      <img src="/assets/images/jobpost/step2.jpg" className="rounded-2xl" width={'100%'} alt="" />
                       <h3 className="absolute  top-5 sm:!top-14 w-1/2 sm:!w-1/2 left-7 text-black font-semibold capitalize text-sm sm:!text-2xl">
                         Add qualifications and industry info
                       </h3>
@@ -752,7 +752,7 @@ const Jobpost = (prop) => {
                 {currentStep === 3 && (
                   <div>
                     <div className="relative mb-5 pb-20 sm:pb-5 border-b overflow-hidden">
-                      <img src="assets/images/jobpost/step3.jpg" className="rounded-2xl" width={'100%'} alt="" />
+                      <img src="/assets/images/jobpost/step3.jpg" className="rounded-2xl" width={'100%'} alt="" />
                        <h3 className="absolute  top-5 sm:!top-14 w-1/2 sm:!w-1/2 left-7 text-black font-semibold capitalize text-sm sm:!text-2xl">
                         Set salary, experience, and skills.
                       </h3>

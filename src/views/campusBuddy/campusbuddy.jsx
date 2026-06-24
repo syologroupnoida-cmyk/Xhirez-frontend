@@ -93,7 +93,7 @@ const CampusBuddy = () => {
                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                  className="relative z-10 rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] border-[16px] border-white"
                >
-                 <img src="assets/images/banner/campus.jpg" className="w-full grayscale-[20%] hover:grayscale-0 transition-all duration-700" alt="Campus" />
+                 <img src="/assets/images/banner/campus.jpg" className="w-full grayscale-[20%] hover:grayscale-0 transition-all duration-700" alt="Campus" />
                </motion.div>
                <div className="absolute -bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl z-20 flex items-center gap-4 border border-slate-50">
                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white"><FaStar /></div>
@@ -219,7 +219,7 @@ const CampusBuddy = () => {
       <section className="py-32 text-center">
         <Container>
            <div className="max-w-4xl mx-auto p-12 bg-white rounded-[4rem] border border-slate-100 shadow-[0_50px_100px_-30px_rgba(0,0,0,0.08)]">
-             <img src="assets/images/foragency/icons/icsupport.png" className="w-24 mx-auto mb-8 animate-bounce-slow" alt="Support" />
+             <img src="/assets/images/foragency/icons/icsupport.png" className="w-24 mx-auto mb-8 animate-bounce-slow" alt="Support" />
              <h2 className="text-4xl font-black text-slate-900 mb-4">Empowering Enterprises</h2>
              <p className="text-slate-500 text-lg font-medium mb-10 max-w-xl mx-auto">Let’s discuss how we can deliver customized solutions for your enterprise—share your contact details today.</p>
              <Button onClick={() => setShowForm(true)} className="px-12 py-4 rounded-full bg-blue-600 border-none font-black text-white hover:scale-105 transition-all shadow-xl shadow-blue-200">

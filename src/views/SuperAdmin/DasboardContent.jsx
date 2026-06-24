@@ -26,7 +26,7 @@ import {
 } from "recharts";
 import axios from "axios";
 import { API_ENDPOINTS } from "../apiConfig";
-import { Link } from "react-router-dom";
+import { Link } from "@/router-dom";
 import AuthorizationHeader from '../AuthorizationHeader';
 
 

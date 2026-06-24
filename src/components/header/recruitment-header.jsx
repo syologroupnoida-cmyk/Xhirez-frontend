@@ -5,10 +5,9 @@ import { faBars, faUser, faSignOutAlt, faTimes } from '@fortawesome/free-solid-s
 import { Avatar, Paper } from '@mantine/core';
 import Recruiternavlinks from './recruiter-navlinks';
 import Recruitmenttopbar from './recruitment-topbar';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "@/router-dom";
 import axios from 'axios';
 import { API_ENDPOINTS } from '../../views/apiConfig';
-import fabimage from '../../../public/assets/images/logo/Xhirez-Logo.png';
 import AuthorizationHeader from '../../views/AuthorizationHeader';
 
 const Recruitmentnavbar = () => {
@@ -108,10 +107,10 @@ const Recruitmentnavbar = () => {
   return (
     <>
       <Recruitmenttopbar />
-      <nav className="bg-[#ECF4FF] w-full flex items-center justify-between h-16 px-4 sm:px-6 md:!px-12 lg:!px-24 relative">
+      <nav className="bg-[#ECF4FF] w-full flex items-center justify-between h-16 px-4 sm:px-6 md:!px-12 lg:!px-24 relative rounded-[10px]">
         {/* Logo */}
         <Link to="/Recruitmenthero">
-          <img src={fabimage} alt="logo" className="sm:h-20 h-14  w-auto" />
+          <img src="/assets/images/logo/Xhirez-Logo.png" alt="Xhirez" className="sm:h-14 h-12 w-auto" />
         </Link>
 
         {/* Hamburger Menu for Nav Links (Mobile/Tablet) */}

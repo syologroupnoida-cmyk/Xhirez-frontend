@@ -24,7 +24,7 @@ import {
 import axios from "axios";
 import { API_ENDPOINTS } from "../apiConfig";
 import { toast, ToastContainer } from "react-toastify";
-import { Link } from "react-router-dom";
+import { Link } from "@/router-dom";
 import AuthorizationHeader from "../AuthorizationHeader";
 const Companydetailupdate = () => {
   const [logo, setLogo] = useState(null);
@@ -328,7 +328,7 @@ if (!formData.socialLinks.twitter.trim()) {
       <div className="px-4 sm:!px-8 md:!px-16 lg:!px-36 mt-4">
  <div className="relative w-full mb-5 pb-5 border-b h-64 sm:!h-80 overflow-hidden">
     <img
-      src="assets/images/job-icon/companydetal.jpg"
+      src="/assets/images/job-icon/companydetal.jpg"
       className="rounded-2xl object-cover w-full h-full"
       alt="Company Detail"
     />

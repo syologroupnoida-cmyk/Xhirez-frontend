@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "react-router-dom": ["./src/router-dom.jsx"]
+    }
+  }
+}

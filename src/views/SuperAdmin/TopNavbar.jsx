@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "@/router-dom";
 import { Bell, User, Settings, LogOut, UserPlus, UserCog } from 'lucide-react';
 import { toast, ToastContainer } from 'react-toastify';
 
@@ -107,7 +107,7 @@ const TopNavbar = () => {
         {/* Brand/Welcome Text */}
         <div className="w-auto h-16 flex items-center space-x-2">
           <img
-            src="../assets/images/logo/Xhirez-Logo.png"
+            src="/assets/images/logo/Xhirez-Logo.png"
             alt="Logo"
             className="w-[250px] hidden border-r md:block h-full object-contain"
           />

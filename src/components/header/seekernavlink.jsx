@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "@/router-dom";
 import React from 'react';
 
 const Seekernavlinks = ({ onInputClick }) => {

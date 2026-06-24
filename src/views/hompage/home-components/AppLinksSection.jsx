@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faApple, faGooglePlay } from "@fortawesome/free-brands-svg-icons"; 
 
@@ -40,7 +40,7 @@ const AppLinksSection = () => {
           <div className="col-md-6">
             <div className="brow-link-img">
               <img
-                src="assets/images/main/appside.jpg"
+                src="/assets/images/banner/home-banner.jpg"
                 width={"100%"}
                 alt=""
               />

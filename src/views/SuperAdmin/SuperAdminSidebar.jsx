@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 import {
   LayoutDashboard,
   Users,
@@ -69,7 +69,7 @@ const SuperAdminSidebar = ({ activeModule, setActiveModule }) => {
         <div className="py-0 border-b bg-white border-gray-800 flex items-center justify-between">
          <div className="flex items-center space-x-2">
   <div className="w-full h-16 rounded-full overflow-hidden">
-    <img src="assets/images/logo/Xhirez-Logo.png" alt="Logo" className="w-full hidden h-full object-cover" />
+    <img src="/assets/images/logo/Xhirez-Logo.png" alt="Logo" className="w-full hidden h-full object-cover" />
   </div>
  </div>
 

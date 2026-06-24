@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/router-dom";
 import {jwtDecode} from "jwt-decode";
 import toast from "react-hot-toast";
 

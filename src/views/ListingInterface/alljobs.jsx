@@ -24,7 +24,7 @@ import UnifiedHeader from '../../components/header/UnifiedHeader';
 import Footer from "../../components/footer/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faAnglesLeft } from "@fortawesome/free-solid-svg-icons";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "@/router-dom";
 import { API_ENDPOINTS } from "../apiConfig";
 import { toast, ToastContainer } from "react-toastify";
 import AuthorizationHeader from "../AuthorizationHeader";

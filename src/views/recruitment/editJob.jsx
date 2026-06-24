@@ -8,7 +8,7 @@ import { API_BASE_URL, API_ENDPOINTS } from "../apiConfig";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faCaretDown, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Spinner } from "react-bootstrap";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "@/router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import AuthorizationHeader from "../AuthorizationHeader";
 
@@ -395,7 +395,7 @@ const EditJob = () => {
                   <div>
                     <div className="relative mb-5 pb-5 border-b overflow-hidden">
                       <img
-                        src="assets/images/jobpost/company-detail.jpg"
+                        src="/assets/images/jobpost/company-detail.jpg"
                         className="rounded-2xl"
                         width="100%"
                         alt=""
@@ -597,7 +597,7 @@ const EditJob = () => {
                   <div>
                     <div className="relative mb-5 pb-5 border-b overflow-hidden">
                       <img
-                        src="assets/images/jobpost/step2.jpg"
+                        src="/assets/images/jobpost/step2.jpg"
                         className="rounded-2xl"
                         width="100%"
                         alt=""
@@ -710,7 +710,7 @@ const EditJob = () => {
                   <div>
                     <div className="relative mb-5 pb-5 border-b overflow-hidden">
                       <img
-                        src="assets/images/jobpost/step3.jpg"
+                        src="/assets/images/jobpost/step3.jpg"
                         className="rounded-2xl"
                         width="100%"
                         alt=""

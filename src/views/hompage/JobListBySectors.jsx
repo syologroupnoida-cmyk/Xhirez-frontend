@@ -4,7 +4,7 @@ import { Container, Row, Col, Breadcrumb, Card, Badge, Button, Spinner,} from "r
 import {MapPin, Building2, Clock, BookmarkPlus,} from "lucide-react";
 import UnifiedHeader from '../../components/header/UnifiedHeader';
 import Footer from "../../components/footer/footer";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "@/router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { API_ENDPOINTS } from "../apiConfig";
 import AuthorizationHeader from "../AuthorizationHeader";

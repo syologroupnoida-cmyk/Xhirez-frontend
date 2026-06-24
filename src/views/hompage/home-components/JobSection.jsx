@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "@/router-dom";
 
 const JobSection = ({ title, data, type }) => (
   <div className="my-2 p-4">
