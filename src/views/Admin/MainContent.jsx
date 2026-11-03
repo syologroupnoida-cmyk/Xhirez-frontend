@@ -134,7 +134,7 @@ const MainContent = () => {
             <Card.Body className="bg-light">
               <Card.Title>Activity</Card.Title>
               <ListGroup variant="flush">
-                <ListGroup.Item className="bg-light">Dobrick published an article 2 hours ago</ListGroup.Item>
+                <ListGroup.Item className="bg-light">Dobrick publiSeed an article 2 hours ago</ListGroup.Item>
                 <ListGroup.Item className="bg-light">Stella created an event 2 hours ago</ListGroup.Item>
                 <ListGroup.Item className="bg-light">Peter submitted the reports 2 hours ago</ListGroup.Item>
                 <ListGroup.Item className="bg-light">Natella updated the docs 2 hours ago</ListGroup.Item>

@@ -12,6 +12,9 @@ import "@/styles/header.css";
 import "@/styles/style.css";
 import "@/App.css";
 import "@/styles/globals.css";
+import "@/styles/tb-theme.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import AIAssistant from "@/components/AIAssistant";
 
 export default function App({ Component, pageProps }) {
   const toastRef = useRef();
@@ -71,6 +74,8 @@ export default function App({ Component, pageProps }) {
         <div className="toast-body">Loading...</div>
       </div>
       <Component {...pageProps} />
+      <WhatsAppButton />
+      <AIAssistant />
     </MantineProvider>
   );
 }

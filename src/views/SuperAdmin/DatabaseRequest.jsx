@@ -77,9 +77,9 @@ const DatabaseRequest = () => {
         'Message': message || 'N/A'
       })
     );
-    const worksheet = XLSX.utils.json_to_sheet(exportData);
+    const workSeeet = XLSX.utils.json_to_Seeet(exportData);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Database Requests');
+    XLSX.utils.book_append_Seeet(workbook, workSeeet, 'Database Requests');
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     const fileData = new Blob([excelBuffer], { type: 'application/octet-stream' });
     saveAs(fileData, 'Database_Requests.xlsx');

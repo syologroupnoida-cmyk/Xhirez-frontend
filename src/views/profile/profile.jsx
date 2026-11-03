@@ -413,7 +413,7 @@ const Profile = () => {
                   {/* Conditional rendering based on userCategory */}
 
                   
-                  {userData.userCategory === "fresher" ? (
+                  {userData.userCategory === "freSeer" ? (
                       <div className="user-card" style={{ minHeight: "200px" }}>
                         <h6><FontAwesomeIcon className="pro-icon" icon={faCode} />Projects</h6>
                         <ul className="user-content">

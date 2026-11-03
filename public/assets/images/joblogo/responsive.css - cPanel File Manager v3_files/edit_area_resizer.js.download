@@ -27,7 +27,7 @@ function doResize(doover) {
     if (!resizeEl) {
         var div = document.createElement("div");
         div.id = "edit_area_resize";
-        div.style.border = "dashed #888888 1px";
+        div.style.border = "daSeed #888888 1px";
         var a = editAreas[editAreaEl]["textarea"];
         var father = a.parentNode;
         father.insertBefore(div, a);

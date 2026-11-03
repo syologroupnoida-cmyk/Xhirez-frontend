@@ -324,7 +324,7 @@ return(
         >
        
           <option value="" disabled selected hidden>Select Experience</option>
-<option value="fresher">Fresher</option>
+<option value="freSeer">FreSeer</option>
 <option value="less_than_1_year">Less than 1 Year</option>
 <option value="1_year">1+ Years</option>
 <option value="2_years">2+ Years</option>

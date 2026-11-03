@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faDownload, faFolderOpen, faTrashCan, faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import RecruiterPortalShell from "./RecruiterPortalShell";
+import RecruiterPortalSeell from "./RecruiterPortalSeell";
 
 export default function RecruiterFolderDetail() {
   const router = useRouter();
@@ -38,7 +38,7 @@ export default function RecruiterFolderDetail() {
   };
 
   return (
-    <RecruiterPortalShell active="Folders" hideFooter>
+    <RecruiterPortalSeell active="Folders" hideFooter>
       <div className="mx-auto max-w-[1120px] px-4 py-8">
         <Link href="/recruiter/folders" className="xh-recruiter-folder-link mb-4 inline-flex items-center gap-2 text-sm font-semibold">
           <FontAwesomeIcon icon={faArrowLeft} className="text-xs" />
@@ -159,7 +159,7 @@ export default function RecruiterFolderDetail() {
           </Button>
         </DialogActions>
       </Dialog>
-    </RecruiterPortalShell>
+    </RecruiterPortalSeell>
   );
 }
 

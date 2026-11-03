@@ -43,7 +43,7 @@ const DashboardContent = ({ activeModule }) => {
   const [businessRequests, setBusinessRequests] = useState(0);
   const [databaseRequests, setDatabaseRequests] = useState(0);
   const [campusBuddyRequests, setCampusBuddyRequests] = useState(0);
-  const [sheCanCodeRequests, setSheCanCodeRequests] = useState(0);
+  const [SheCanCodeRequests, setSheCanCodeRequests] = useState(0);
 
   // recent jobs data
   const [recentJobs, setRecentJobs] = useState([]);
@@ -64,7 +64,7 @@ const DashboardContent = ({ activeModule }) => {
           setBusinessRequests(response?.data?.data?.businessRequest || 0);
           setDatabaseRequests(response?.data?.data?.databaseRequest || 0);
           setCampusBuddyRequests(response?.data?.data?.campusBuddy || 0);
-          setSheCanCodeRequests(response?.data?.data?.sheCanCode || 0);
+          setSheCanCodeRequests(response?.data?.data?.SheCanCode || 0);
         }
       })
       .catch((error) => {
@@ -301,8 +301,8 @@ const DashboardContent = ({ activeModule }) => {
                       color: "text-red-500",
                     },
                     {
-                      title: "She Can Code",
-                      value: sheCanCodeRequests,
+                      title: "SheCanCode",
+                      value: SheCanCodeRequests,
                       color: "text-red-500",
                     },
                   ].map((item, index) => (

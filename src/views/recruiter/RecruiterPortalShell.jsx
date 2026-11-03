@@ -47,7 +47,7 @@ const navLinkClass =
 
 const activeNavClass = "text-white";
 
-export default function RecruiterPortalShell({ children, active = "Home", hideFooter = false }) {
+export default function RecruiterPortalSeell({ children, active = "Home", hideFooter = false }) {
   const router = useRouter();
   const [isCandidateMenuOpen, setIsCandidateMenuOpen] = useState(false);
   const [isFolderMenuOpen, setIsFolderMenuOpen] = useState(false);

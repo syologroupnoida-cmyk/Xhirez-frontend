@@ -21,7 +21,7 @@ const SheCanCodeData = () => {
   const fetchRequests = async () => {
     try {
       setLoading(true);
-      const response = await AuthorizationHeader.get(API_ENDPOINTS.SUPERADMINSHECANCODEREQUEST);
+      const response = await AuthorizationHeader.get(API_ENDPOINTS.SUPERADMINSheCanCodeREQUEST);
       if (response?.data?.status === 200) {
         setRequests(response.data.data);
       } else {
@@ -74,9 +74,9 @@ const SheCanCodeData = () => {
         'Email': email || 'N/A'
       })
     );
-    const worksheet = XLSX.utils.json_to_sheet(exportData);
+    const workSeeet = XLSX.utils.json_to_Seeet(exportData);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'SheCanCode Requests');
+    XLSX.utils.book_append_Seeet(workbook, workSeeet, 'SheCanCode Requests');
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     const fileData = new Blob([excelBuffer], { type: 'application/octet-stream' });
     saveAs(fileData, 'SheCanCode_Requests.xlsx');
@@ -103,7 +103,7 @@ const SheCanCodeData = () => {
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8 font-sans">
       <Toaster position="top-right" />
       <div className="max-w-9xl mx-auto">
-        <h5 className="text-3xl font-bold text-gray-900 mb-4">She Can Code</h5>
+        <h5 className="text-3xl font-bold text-gray-900 mb-4">SheCanCode</h5>
         <div className="bg-white rounded-xl shadow-lg p-6">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
             <div className="relative w-full sm:w-80">

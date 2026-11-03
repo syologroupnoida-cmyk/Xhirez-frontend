@@ -352,7 +352,7 @@ const Advancejoblist = () => {
         'Location': candidate.address || '',
         'About Me': candidate.aboutme || '',
         'Skills': candidate.skills || '',
-        'Experience': candidate.experienceperiod ? `${candidate.experienceperiod} years` : 'Fresher',
+        'Experience': candidate.experienceperiod ? `${candidate.experienceperiod} years` : 'FreSeer',
         'Min Salary': candidate.min_salary ? `${candidate.min_salary} LPA` : '',
         'Max Salary': candidate.max_salary ? `${candidate.max_salary} LPA` : '',
         'Salary Range': candidate.min_salary && candidate.max_salary 
@@ -973,7 +973,7 @@ const Advancejoblist = () => {
                                     <div className="d-flex flex-wrap gap-2 text-muted text-sm mt-2">
                                       <div className="d-flex align-items-center gap-1">
                                         <Clock size={14} />
-                                        <span>{candidate.experienceperiod ? `${candidate.experienceperiod} years` : 'Fresher'}</span>
+                                        <span>{candidate.experienceperiod ? `${candidate.experienceperiod} years` : 'FreSeer'}</span>
                                       </div>
                                       <div className="d-flex align-items-center gap-1">
                                         <Star size={14} />

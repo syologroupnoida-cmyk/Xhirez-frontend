@@ -91,7 +91,7 @@ export const sectorMapping = {
   "facility management": { displayName: "Facility Management", icon: faBuilding },
   fertilizers: { displayName: "Fertilizers", icon: faIndustry },
   "food processing": { displayName: "Food Processing", icon: faUtensils },
-  fresher: { displayName: "Fresher", icon: faUserGraduate },
+  freSeer: { displayName: "FreSeer", icon: faUserGraduate },
   "gems jewellery": { displayName: "Gems Jewellery", icon: faGem },
   glass: { displayName: "Glass", icon: faGlassCheers },
   "air conditioning": { displayName: "Air Conditioning", icon: faSnowflake },

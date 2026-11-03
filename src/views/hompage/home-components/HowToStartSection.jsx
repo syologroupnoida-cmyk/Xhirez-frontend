@@ -52,7 +52,7 @@ const HowToStartSection = () => {
             
             <div className="relative d-flex flex-column gap-4">
              
-              <div className="absolute left-8 top-10 bottom-10 w-[2px] border-l-2 border-dashed border-gray-200 -z-0 hidden md:block"></div>
+              <div className="absolute left-8 top-10 bottom-10 w-[2px] border-l-2 border-daSeed border-gray-200 -z-0 hidden md:block"></div>
 
               {steps.map((step, index) => (
                 <div 

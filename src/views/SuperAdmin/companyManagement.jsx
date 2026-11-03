@@ -167,9 +167,9 @@ const CompanyManagement = () => {
         contact_personName: contact_personName || "-",
       })
     );
-    const worksheet = XLSX.utils.json_to_sheet(exportData);
+    const workSeeet = XLSX.utils.json_to_Seeet(exportData);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, "Companies");
+    XLSX.utils.book_append_Seeet(workbook, workSeeet, "Companies");
     const excelBuffer = XLSX.write(workbook, {
       bookType: "xlsx",
       type: "array",

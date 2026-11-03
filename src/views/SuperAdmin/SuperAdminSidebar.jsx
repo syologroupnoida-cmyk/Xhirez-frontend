@@ -30,7 +30,7 @@ const modules = [
   { id: 'BuisnessRequest', name: 'Business Requests', icon: Bell, path: '/SuperAdmin/BusinessRequests' },
   { id: 'DatabaseRequest', name: 'Database Requests', icon: Database, path: '/SuperAdmin/DataBaseReq' },
   { id: 'CampusBuddy', name: 'Campus Buddy ', icon: Users, path: '/SuperAdmin/CampusBuddy' },
-  { id: 'SheCanCode', name: 'She Can Code', icon: Sparkles, path: '/SuperAdmin/SheCanCode' },
+  { id: 'SheCanCode', name: 'SheCanCode', icon: Sparkles, path: '/SuperAdmin/SheCanCode' },
   { id: 'skills', name: 'Manage Skills', icon: Award, path: '/SuperAdmin/skills' },
   { id: 'courses', name: 'Manage Courses', icon: BookOpen, path: '/SuperAdmin/courses' },
   // { id: 'keywords', name: 'Manage Keywords', icon: Tags, path: '/SuperAdmin/keywords' },

@@ -1,132 +1,107 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faChevronDown, faBuilding, 
-  faRocket, faUser, faArrowRight
-} from "@fortawesome/free-solid-svg-icons";
-import { Link } from "@/router-dom";
-import Navlinks from './navlinks';
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { Link, useLocation } from "@/router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
+
+const OFFERS = [
+  "Post your first job for FREE – limited offer",
+  "New: AI-powered resume builder is live!",
+  "Download the app for real-time job alerts",
+];
+
+const JOB_MENU = [
+  { name: "Browse all jobs", url: "/alljob" },
+  { name: "Jobs by sector", url: "/jobs-by-sector" },
+  { name: "Remote jobs", url: "/alljob?query=remote" },
+];
+const EMPLOYER_MENU = [
+  { name: "Employer login", url: "/employer-login" },
+  { name: "Recruiter sign up", url: "/recruiter/sign-up" },
+  { name: "Hiring solutions", url: "/business" },
+];
+const LINKS = [
+  { name: "Campus Buddy", url: "/campus-buddy" },
+  { name: "She Can Code", url: "/Shecancode" },
+  { name: "E-Campus", url: "/business" },
+  { name: "Career Counselling", url: "/career-counselling" },
+];
+
+const Dropdown = ({ label, items }) => (
+  <li className="xh-tb-drop">
+    <button type="button" className="xh-tb-drop-btn">
+      {label} <FontAwesomeIcon icon={faChevronDown} style={{ fontSize: 11 }} />
+    </button>
+    <div className="xh-tb-drop-menu">
+      {items.map((i) => (
+        <Link key={i.name} to={i.url}>{i.name}</Link>
+      ))}
+    </div>
+  </li>
+);
 
 const Header = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [currentOffer, setCurrentOffer] = useState(0);
-  const dropdownRef = useRef(null);
-
-  const offers = [
-    "✨ New: AI-Powered Resume Builder is now Live!",
-    "🚀 Post your first job for FREE - Limited Offer",
-    "📱 Download the app for real-time job alerts"
-  ];
+  const [offer, setOffer] = useState(0);
+  const [promoOpen, setPromoOpen] = useState(true);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentOffer((prev) => (prev + 1) % offers.length);
-    }, 4000);
-    return () => clearInterval(timer);
+    const t = setInterval(() => setOffer((p) => (p + 1) % OFFERS.length), 4000);
+    return () => clearInterval(t);
   }, []);
 
+  // lets the hero (and other pages) shift up when the promo strip is closed
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setActiveDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const dropdownBaseClass = "absolute right-0 top-full mt-0 bg-white rounded-[4px] shadow-[0_20px_60px_rgba(0,0,0,0.1)] border border-gray-50 p-2 z-[1000] transition-all duration-300 transform origin-top animate-in fade-in zoom-in-95";
+    document.documentElement.classList.toggle("xh-promo-hidden", !promoOpen);
+    return () => document.documentElement.classList.remove("xh-promo-hidden");
+  }, [promoOpen]);
 
   return (
-    <div className="xh-site-header fixed top-0 w-full z-[999] font-sans" ref={dropdownRef}>
-      
-    
-      <div className="xh-header-promo bg-gradient-to-r from-[#1e293b] via-[#334155] to-[#1e293b] text-white overflow-hidden">
-        <Container className="flex justify-center items-center px-6">
-          <div className="flex items-center gap-3 transition-opacity duration-500">
-         
-            <p className="xh-promo-text text-[12px] font-medium tracking-tight opacity-90">
-              {offers[currentOffer]}
-            </p>
-          </div>
-        </Container>
-      </div>
+    <div className="xh-tb-header">
+      {promoOpen && (
+        <div className="xh-tb-promo">
+          <p className="xh-tb-promo-text">{OFFERS[offer]}</p>
+          <Link to="/employer-login" className="xh-tb-promo-btn">Post a Job Free</Link>
+          <button className="xh-tb-promo-close" onClick={() => setPromoOpen(false)} aria-label="Close offer">
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+        </div>
+      )}
 
-      
-      <header className="xh-header-bar bg-white/80 backdrop-blur-xl border-b border-gray-100 h-[70px] flex items-center shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)]">
-        <Container className="flex items-center justify-between px-6 lg:px-10">
-          
-         
-          <div className="flex items-center">
-            <Link to="/" className="xh-logo-link flex items-center gap-3 transition-all hover:opacity-90">
-              <img
-                src="/assets/images/logo/Xhirez-Logo.png"
-                alt="Xhirez"
-                className="xh-logo-image"
-              />
-              <span className="xh-logo-text">Xhirez</span>
-            </Link>
-          </div>
+      <nav className="xh-tb-nav">
+        <Link to="/" className="xh-tb-logo">
+          <img src="/assets/images/logo/Xhirez-Logo.png" alt="Xhirez" />
+        </Link>
 
-         
-          <div className="flex items-center justify-end gap-3">
-            <nav className="hidden xl:flex items-center">
-              <Navlinks />
-            </nav>
-            <Link
-              to="/login"
-              onClick={() => setActiveDropdown(null)}
-              className="xh-header-button group flex items-center justify-center gap-2 text-[13px] font-normal transition-all border bg-white border-[#2f5cf6] text-[#2f5cf6] hover:bg-[#f4f7ff] no-underline"
-            >
-              <FontAwesomeIcon icon={faUser} className="text-[12px] opacity-70" />
-              <span>Login</span>
-            </Link>
+        <ul className="xh-tb-links">
+          <Dropdown label="Jobs" items={JOB_MENU} />
+          {LINKS.map((l) => (
+            <li key={l.name}>
+              <Link to={l.url} className={`xh-tb-link ${pathname === l.url ? "is-active" : ""}`}>{l.name}</Link>
+            </li>
+          ))}
+          <Dropdown label="For Employers" items={EMPLOYER_MENU} />
+        </ul>
 
-            <Link
-              to="/signUp"
-              onClick={() => setActiveDropdown(null)}
-              className="xh-header-button flex items-center justify-center gap-2 text-[13px] font-normal transition-all border border-[#ff5a3d] shadow-sm bg-[#ff5a3d] text-white hover:bg-[#ea4528] hover:border-[#ea4528] hover:shadow-lg hover:shadow-orange-100 active:scale-95 no-underline"
-            >
-              <span>Register</span>
-            </Link>
+        { /* puSees language / login / CTA to the right (replaces the search bar's spacing) */ }
+        <div className="xh-tb-spacer" />
 
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveDropdown('employers')}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button
-                type="button"
-                className={`xh-header-employer-trigger flex items-center justify-center gap-2 px-2 text-[13px] font-normal text-gray-700 hover:text-[#2f5cf6] transition-colors ${activeDropdown === 'employers' ? 'is-open' : ''}`}
-              >
-                <span>For employers</span>
-                <FontAwesomeIcon icon={faChevronDown} className={`text-[10px] opacity-60 transition-transform ${activeDropdown === 'employers' ? 'rotate-180' : ''}`} />
-              </button>
+        <LanguageSwitcher />
+        <Link to="/login" className="xh-tb-login">Login</Link>
+        {<Link to="/signUp" className="xh-tb-btn-register">Register</Link> }
+        <button className="xh-tb-burger" onClick={() => setMobileOpen((o) => !o)} aria-label="Menu">
+          <FontAwesomeIcon icon={mobileOpen ? faXmark : faBars} />
+        </button>
+      </nav>
 
-              {activeDropdown === 'employers' && (
-                <div className={`${dropdownBaseClass} w-44`}>
-                  <Link to="/business" className="flex items-center justify-between p-2 rounded-[4px] hover:bg-gray-50 transition group no-underline">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-[4px] flex items-center justify-center"><FontAwesomeIcon icon={faRocket} /></div>
-                      <span className="text-[12px] font-normal text-gray-800">Buy now</span>
-                    </div>
-                    <FontAwesomeIcon icon={faArrowRight} className="text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-gray-500" />
-                  </Link>
-                  <Link to="/employer-login" className="flex items-center justify-between p-2 rounded-[4px] hover:bg-gray-50 transition group no-underline">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-orange-50 text-orange-600 rounded-[4px] flex items-center justify-center"><FontAwesomeIcon icon={faBuilding} /></div>
-                      <span className="text-[12px] font-normal text-gray-800">Employer Login</span>
-                    </div>
-                    <FontAwesomeIcon icon={faArrowRight} className="text-[10px] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-gray-500" />
-                  </Link>
-                </div>
-              )}
-            </div>
-
-          </div>
-        </Container>
-      </header>
+      {mobileOpen && (
+        <div className="xh-tb-mobile">
+          {[...JOB_MENU, ...LINKS, ...EMPLOYER_MENU, { name: "Login", url: "/login" }].map((l) => (
+            <Link key={l.name} to={l.url} onClick={() => setMobileOpen(false)}>{l.name}</Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
