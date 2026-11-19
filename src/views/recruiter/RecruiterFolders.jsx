@@ -2,14 +2,14 @@ import React, { useMemo, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
-import RecruiterPortalSeell from "./RecruiterPortalSeell";
+import RecruiterPortalShell from "./RecruiterPortalShell";
 
 export default function RecruiterFolders() {
   const foldersSnapshot = useSyncExternalStore(subscribeToFolderStore, getFolderSnapshot, getServerFolderSnapshot);
   const folders = useMemo(() => JSON.parse(foldersSnapshot), [foldersSnapshot]);
 
   return (
-    <RecruiterPortalSeell active="Folders" hideFooter>
+    <RecruiterPortalShell active="Folders" hideFooter>
       <div className="mx-auto max-w-[1120px] px-4 py-8">
         <div className="mb-6 flex flex-col justify-between gap-4 rounded-[10px] bg-white p-6 shadow-[0_12px_34px_rgba(15,23,42,0.08)] md:flex-row md:items-center">
           <div>
@@ -44,7 +44,7 @@ export default function RecruiterFolders() {
           </div>
         )}
       </div>
-    </RecruiterPortalSeell>
+    </RecruiterPortalShell>
   );
 }
 

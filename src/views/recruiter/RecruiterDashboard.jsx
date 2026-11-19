@@ -11,7 +11,7 @@ import {
   faUserCheck,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
-import RecruiterPortalSeell from "./RecruiterPortalSeell";
+import RecruiterPortalShell from "./RecruiterPortalShell";
 
 const updates = [
   {
@@ -46,7 +46,7 @@ const usage = [
 
 export default function RecruiterDashboard() {
   return (
-    <RecruiterPortalSeell active="Home">
+    <RecruiterPortalShell active="Home">
       <div className="mx-auto max-w-[1840px] px-4 py-7 lg:px-12">
         <div className="mb-5">
           <h5 className="m-0 text-xl font-semibold tracking-tight text-slate-800">Recruiter Dashboard</h5>
@@ -195,6 +195,6 @@ export default function RecruiterDashboard() {
           <FontAwesomeIcon icon={faChartSimple} />
         </button>
       </div>
-    </RecruiterPortalSeell>
+    </RecruiterPortalShell>
   );
 }

@@ -974,6 +974,24 @@ function countBy(list, key) {
   return Object.entries(map).sort((a, b) => b[1] - a[1]);
 }
 
+function subscribeToFolderStore(callback) {
+  window.addEventListener("storage", callback);
+  window.addEventListener("xh-recruiter-folders-updated", callback);
+
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener("xh-recruiter-folders-updated", callback);
+  };
+}
+
+function getFolderSnapshot() {
+  return window.localStorage.getItem("xh-recruiter-folders") || "[]";
+}
+
+function getServerFolderSnapshot() {
+  return "[]";
+}
+
 export default function SearchAdvanced() {
   const router = useRouter();
   const initialAny = String(router.query.anyKeywords || "");
@@ -1373,6 +1391,133 @@ function FilterBox({ children, title }) {
       {children}
     </div>
   );
+}
+
+function CandidateCard({ candidate, isPhoneRevealed, onRevealPhone, folders, onMoveToFolder, onCreateFolder }) {
+  const [selectedFolder, setSelectedFolder] = useState("");
+  const displayPhone = isPhoneRevealed ? candidate.phone : maskPhone(candidate.phone);
+  const skills = [...candidate.skills, ...candidate.otherSkills];
+
+  const handleFolderChange = (event) => {
+    const folderId = event.target.value;
+    setSelectedFolder("");
+
+    if (folderId === "__create_folder__") {
+      onCreateFolder();
+      return;
+    }
+
+    if (folderId) onMoveToFolder(folderId);
+  };
+
+  return (
+    <article className="bg-white shadow-sm">
+      <div className="grid gap-4 p-4 xl:grid-cols-[minmax(0,1fr)_230px]">
+        <div className="min-w-0">
+          <div className="flex items-start gap-3">
+            <input type="checkbox" className="mt-1 h-4 w-4 rounded border-slate-300" />
+            <div className="min-w-0 flex-1">
+              <div className="flex flex-wrap items-center gap-2">
+                <h5 className="m-0 text-xl font-bold leading-tight">
+                  <Link href={`/recruiter/candidates/${candidate.id}`} className="text-[#2f4fc8] no-underline">
+                    {candidate.name}
+                  </Link>
+                </h5>
+                {candidate.immediateJoiner && (
+                  <span className="rounded-full bg-[#edf2ff] px-3 py-1 text-xs font-bold text-[#1f4eea]">Immediate Joiner</span>
+                )}
+              </div>
+              <div className="mt-2 flex flex-wrap gap-3 text-sm text-[#566373]">
+                <span>{candidate.experience}</span>
+                <span>{candidate.salary}</span>
+                <span>{candidate.location}</span>
+              </div>
+              <p className="m-0 mt-3 text-sm text-[#4d5c6e]">{candidate.current}</p>
+              {candidate.education.map((item) => (
+                <p key={item} className="m-0 mt-2 text-sm text-[#657383]">{item}</p>
+              ))}
+              <p className="m-0 mt-2 text-sm text-[#4d5c6e]">Pref. Location: {candidate.preferredLocations}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span key={skill} className="rounded-full border border-[#cbd8e5] bg-[#f8fbfd] px-3 py-1 text-xs font-semibold text-[#687584]">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              <p className="m-0 mt-3 border-t border-slate-200 pt-2 text-sm text-[#566373]">
+                <strong>May also know:</strong> {candidate.mayAlsoKnow}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside className="rounded border border-slate-200 bg-white">
+          <div className="flex h-[118px] items-center justify-center">
+            <span className="flex h-16 w-16 items-center justify-center rounded-full text-4xl font-bold text-white" style={{ backgroundColor: candidate.avatarColor }}>
+              {candidate.avatar}
+            </span>
+          </div>
+          <div className="bg-[#f6f6f6] px-4 py-4">
+            <div className="text-right text-sm font-bold text-[#34a646]">{candidate.score}%</div>
+            <div className="mt-1 h-2.5 rounded-full bg-gradient-to-r from-[#ff4f45] via-[#ffc53d] to-[#22c55e]" />
+            <p className="m-0 mt-1 text-center text-xs text-[#738095]">Response Likelihood</p>
+            <p className="m-0 mt-2 text-center text-sm font-bold text-[#35a348]">PROACTIVE</p>
+          </div>
+        </aside>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-3 border-t border-slate-100 bg-[#fbfbfd] px-5 py-3">
+        <button type="button" className="inline-flex h-8 items-center gap-2 rounded border border-[#cfdef2] bg-white px-5 text-xs font-bold text-[#3349b9]">
+          <Comment fontSize="small" />
+          Comment
+        </button>
+        <div className="inline-flex h-8 min-w-[164px] items-center rounded border border-[#cfdef2] bg-white">
+          <Select value={selectedFolder} displayEmpty variant="standard" disableUnderline onChange={handleFolderChange} fullWidth>
+            <MenuItem value="" disabled>Move to Folder</MenuItem>
+            {folders.length === 0 ? (
+              <MenuItem value="__create_folder__">Create folder first</MenuItem>
+            ) : (
+              folders.map((folder) => <MenuItem key={folder.id} value={folder.id}>{folder.name}</MenuItem>)
+            )}
+            {folders.length > 0 && <MenuItem value="__create_folder__">Create folder</MenuItem>}
+          </Select>
+        </div>
+        <BookmarkBorder className="text-slate-400" fontSize="small" />
+        <MoreVert className="text-[#4a62c7]" fontSize="small" />
+        <span className="ml-auto text-xs text-[#2f3a4a]">Profile Viewed</span>
+        <button
+          type="button"
+          onClick={onRevealPhone}
+          className="rounded border border-[#3b5bdb] bg-white px-3 py-2 text-sm font-bold text-black"
+          aria-label={isPhoneRevealed ? "Phone number revealed" : "Reveal phone number"}
+        >
+          <Phone fontSize="small" className="mr-1 text-slate-600" />
+          {displayPhone}
+          <ContentCopy fontSize="small" className="ml-4 text-[#8795d9]" />
+        </button>
+        <div className="w-full text-right text-xs text-[#6b7684]">
+          <span>Updated: {candidate.updated}</span>
+          <span className="ml-4">Active: {candidate.active}</span>
+        </div>
+      </div>
+      {isPhoneRevealed && (
+        <div className="border-t border-slate-100 bg-[#eef1ff] px-5 py-3">
+          <p className="m-0 text-xs font-bold text-[#4054b2]">Candidate looking for job?</p>
+          <div className="mt-2 flex gap-3">
+            <span className="rounded border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700">Yes</span>
+            <span className="rounded border border-red-200 bg-red-50 px-3 py-1 text-xs font-bold text-red-600">No</span>
+          </div>
+        </div>
+      )}
+    </article>
+  );
+}
+
+function maskPhone(phone) {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length < 4) return phone;
+
+  return `${digits.slice(-10, -8)}xxxxxx${digits.slice(-2)}`;
 }
 
 function FilterRow({ label, value, onChange, options }) {
