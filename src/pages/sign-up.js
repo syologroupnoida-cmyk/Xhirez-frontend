@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-const SignUpPage = dynamic(() => import('../views/signup/SignUp'), { ssr: false });
+const SignUpPage = dynamic(() => import('../views/signup/signUp'), { ssr: false });
 
 function SignUpPagePage() {
   return (
