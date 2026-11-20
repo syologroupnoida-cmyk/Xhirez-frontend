@@ -13,7 +13,7 @@ import "@/styles/style.css";
 import "@/App.css";
 import "@/styles/globals.css";
 import "@/styles/tb-theme.css";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import WhatsAppButton from "@/components/WhatsAppbutton";
 import AIAssistant from "@/components/AIAssistant";
 
 export default function App({ Component, pageProps }) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-const SheCanCode = dynamic(() => import('../views/SheCanCode/SheCanCode'), { ssr: false });
+const SheCanCode = dynamic(() => import('../views/shecancode/shecancode'), { ssr: false });
 
 function SheCanCodePage() {
   return (
