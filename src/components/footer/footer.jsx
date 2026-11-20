@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faMobileAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faMobileAlt, faEnvelope, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faTwitter, faLinkedin, faInstagram, faAppStoreIos, faGooglePlay } from '@fortawesome/free-brands-svg-icons';
 
+const LOCATIONS = [
+  "Noida", "Gurugram", "Delhi", "Mumbai", "Bengaluru", "Hyderabad", "Pune", "Chennai", "Kolkata", "Ahmedabad",
+  "Jaipur", "Lucknow", "Chandigarh", "Indore", "Bhopal", "Patna", "Kochi", "Coimbatore", "Visakhapatnam", "Nagpur",
+  "Surat", "Thane", "Vadodara", "Ghaziabad", "Faridabad", "Amritsar", "Ludhiana", "Kanpur", "Varanasi", "Agra",
+  "Meerut", "Allahabad", "Ranchi", "Bhubaneswar", "Guwahati", "Dehradun", "Mysuru", "Mangaluru", "Nashik", "Rajkot"
+];
+
 const Footer = () => {
+  const [showAllLocations, setShowAllLocations] = useState(false);
+  const visibleLocations = showAllLocations ? LOCATIONS : LOCATIONS.slice(0, 15);
+
   return (
     // Background changed to White with a subtle top border
     <footer className="xh-site-footer bg-white pt-24 pb-12 text-slate-500 border-t border-slate-100 overflow-hidden relative font-sans">
@@ -15,33 +25,23 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           
-          {/* Brand & App Links */}
-          <div className="space-y-8">
-            <div className="footer-brand">
-              <h2 className="text-3xl font-black text-slate-900 mb-4 tracking-tighter">
-                X<span className="text-[#07A1E3]">hirez</span>
-              </h2>
-              <p className="text-[15px] leading-relaxed text-slate-500 max-w-xs">
-                Xhirez is a modern job portal connecting candidates and employers seamlessly. 
-                Empowering your professional journey with AI-driven matching.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              <p className="text-slate-900 text-[11px] font-bold uppercase tracking-[0.2em]">Get the Mobile App</p>
-              <div className="flex flex-wrap gap-3">
-                <a href="/#download" className="flex items-center gap-3 bg-slate-50 border border-slate-200 px-5 py-2.5 rounded-2xl hover:bg-white hover:border-[#07A1E3] hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 no-underline text-slate-700 group">
-                  <FontAwesomeIcon icon={faGooglePlay} className="text-xl group-hover:text-[#07A1E3]" />
-                  <div className="text-[10px] leading-tight">Download on <br/><span className="text-xs font-bold text-slate-900">Play Store</span></div>
-                </a>
-                <a href="/#download" className="flex items-center gap-3 bg-slate-50 border border-slate-200 px-5 py-2.5 rounded-2xl hover:bg-white hover:border-[#07A1E3] hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 no-underline text-slate-700 group">
-                  <FontAwesomeIcon icon={faAppStoreIos} className="text-xl group-hover:text-[#07A1E3]" />
-                  <div className="text-[10px] leading-tight">Available on <br/><span className="text-xs font-bold text-slate-900">App Store</span></div>
-                </a>
-              </div>
-            </div>
-          </div>
-
+          {/* Brand */}
+       <div className="space-y-8">
+         <div className="footer-brand">
+         <a href="/" className="xh-footer-logo-link" style={{ display: "inline-block", marginBottom: 16 }}>
+        <img
+        src="/assets/images/logo/Xhirez-Logo.png"
+        alt="Xhirez"
+        className="xh-footer-logo"
+        style={{ height: 44, width: "auto", maxWidth: "none", display: "block" }}
+         />
+        </a>
+       <p className="text-[15px] leading-relaxed text-slate-500 max-w-xs">
+      Xhirez is a modern job portal connecting candidates and employers seamlessly.
+      Empowering your professional journey with AI-driven matching.
+       </p>
+       </div>
+       </div>
           {/* Candidates Links */}
           <div>
             <h4 className="text-slate-900 font-bold text-sm uppercase tracking-wider mb-8 relative inline-block">
@@ -97,41 +97,59 @@ const Footer = () => {
               ))}
             </div>
           </div>
-                  </div>
-        
-                  {/* Jobs by Location Section */}
-                  <div className="border-t border-slate-100 pt-12 pb-8 mt-12">
-                    <h4 className="text-slate-900 font-bold text-sm uppercase tracking-wider mb-8 relative inline-block">
-                      Jobs by Location
-                      <span className="absolute -bottom-2 left-0 w-8 h-1 bg-[#07A1E3] rounded-full"></span>
-                    </h4>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-3">
-                      {/* Placeholder for locations. In a real app, this would come from an API */}
-                      {[
-                        "Noida", "Gurugram", "Delhi", "Mumbai", "Bengaluru", "Hyderabad", "Pune", "Chennai", "Kolkata", "Ahmedabad",
-                        "Jaipur", "Lucknow", "Chandigarh", "Indore", "Bhopal", "Patna", "Kochi", "Coimbatore", "Visakhapatnam", "Nagpur",
-                        "Surat", "Thane", "Vadodara", "Ghaziabad", "Faridabad", "Amritsar", "Ludhiana", "Kanpur", "Varanasi", "Agra",
-                        "Meerut", "Allahabad", "Ranchi", "Bhubaneswar", "Guwahati", "Dehradun", "Mysuru", "Mangaluru", "Nashik", "Rajkot"
-                      ].map((location, index) => (
-                        <a key={index} href={`/alljob?location=${encodeURIComponent(location)}`} className="xh-footer-job-link text-sm font-medium transition-colors">
-                          View Jobs in {location}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-        
-                {/* Bottom Line */}
-                <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
-                  <p className="m-0 text-sm text-slate-400 font-medium order-2 md:order-1">            © 2026 <span className="text-slate-900 font-bold">Xhirez</span>. 
-            Built with ❤️ by <a href="https://www.successsign.com" className="text-[#07A1E3] no-underline font-bold hover:underline">SuccessSign</a>
+        </div>
+
+        {/* Jobs by Location Section */}
+        <div className="border-t border-slate-100 pt-12 pb-8 mt-12">
+          <h4 className="text-slate-900 font-bold text-sm uppercase tracking-wider mb-8 relative inline-block">
+            Jobs by Location
+            <span className="absolute -bottom-2 left-0 w-8 h-1 bg-[#07A1E3] rounded-full"></span>
+          </h4>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-3">
+            {/* Placeholder for locations. In a real app, this would come from an API */}
+            {visibleLocations.map((location) => (
+              <a key={location} href={`/alljob?location=${encodeURIComponent(location)}`} className="xh-footer-job-link text-sm font-medium transition-colors">
+                Jobs in {location}
+              </a>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setShowAllLocations((s) => !s)}
+            className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#07A1E3] bg-transparent border-0 p-0 cursor-pointer hover:underline"
+          >
+            {showAllLocations ? "Show less" : `Show all ${LOCATIONS.length} locations`}
+            <FontAwesomeIcon icon={showAllLocations ? faChevronUp : faChevronDown} className="text-xs" />
+          </button>
+        </div>
+
+        {/* Bottom Line */}
+        <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="m-0 text-sm text-slate-400 font-medium order-2 md:order-1"> © 2026 <span className="text-slate-900 font-bold"> Developed By Xhirez</span>. 
+            {/* Built with ❤️ by <a href="https://www.successsign.com" className="text-[#07A1E3] no-underline font-bold hover:underline">SuccessSign</a> */}
           </p>
           
-          <div className="flex gap-3 order-1 md:order-2">
+          <div className="flex gap-3 order-1 md:order-2 items-center">
             {[faFacebook, faTwitter, faLinkedin, faInstagram].map((icon, i) => (
               <a key={i} href="#" className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#07A1E3] hover:shadow-lg hover:shadow-blue-200 transition-all duration-300 no-underline border border-slate-100">
                 <FontAwesomeIcon icon={icon} />
               </a>
             ))}
+          </div>
+
+          <div className="space-y-4 order-3">
+            <p className="text-slate-900 text-[11px] font-bold uppercase tracking-[0.2em]">Get the Mobile App</p>
+            <div className="flex flex-wrap gap-3">
+              <a href="/#download" className="flex items-center gap-3 bg-slate-50 border border-slate-200 px-5 py-2.5 rounded-2xl hover:bg-white hover:border-[#07A1E3] hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 no-underline text-slate-700 group">
+                <FontAwesomeIcon icon={faGooglePlay} className="text-xl group-hover:text-[#07A1E3]" />
+                <div className="text-[10px] leading-tight">Download on <br/><span className="text-xs font-bold text-slate-900">Play Store</span></div>
+              </a>
+              <a href="/#download" className="flex items-center gap-3 bg-slate-50 border border-slate-200 px-5 py-2.5 rounded-2xl hover:bg-white hover:border-[#07A1E3] hover:shadow-lg hover:shadow-blue-100 transition-all duration-300 no-underline text-slate-700 group">
+                <FontAwesomeIcon icon={faAppStoreIos} className="text-xl group-hover:text-[#07A1E3]" />
+                <div className="text-[10px] leading-tight">Available on <br/><span className="text-xs font-bold text-slate-900">App Store</span></div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

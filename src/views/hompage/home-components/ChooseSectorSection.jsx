@@ -6,6 +6,7 @@ import {
   faGraduationCap, faGear, faArrowRight, faCoins, faHeadset 
 } from "@fortawesome/free-solid-svg-icons";
 
+
 const ChooseSectorSection = () => {
   const [topSectors, setTopSectors] = useState([]);
 
@@ -41,7 +42,7 @@ const ChooseSectorSection = () => {
         
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="text-5xl font-extrabold text-[#1E293B] mb-6 tracking-tight">
-            Popular <span className="text-primary-blue relative">Categories
+            Popular <span className="text-primary-blue relative">Jobs
               <svg className="absolute -bottom-2 left-0 w-full h-2 text-primary-blue/20" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 25 0 50 5 T 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
               </svg>

@@ -31,6 +31,10 @@ const nextConfig = {
         source: "/bookmarkUsers",
         destination: "/bookMarkUsers",
       },
+      // She Can Code: any spelling opens the same page
+      { source: "/Shecancode", destination: "/shecancode" },
+      { source: "/SheCanCode", destination: "/shecancode" },
+      { source: "/she-can-code", destination: "/shecancode" },
     ];
   },
 };

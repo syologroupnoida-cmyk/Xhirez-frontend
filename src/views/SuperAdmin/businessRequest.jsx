@@ -78,9 +78,9 @@ const BuisnessRequest = () => {
       Designation: designation || 'N/A',
     })
   );
-  const worksheet = XLSX.utils.json_to_sheet(exportData);
+  const workSeeet = XLSX.utils.json_to_Seeet(exportData);
   const workbook = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(workbook, worksheet, 'Business Requests');
+  XLSX.utils.book_append_Seeet(workbook, workSeeet, 'Business Requests');
   const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
   const fileData = new Blob([excelBuffer], { type: 'application/octet-stream' });
   saveAs(fileData, 'Business_Requests.xlsx');

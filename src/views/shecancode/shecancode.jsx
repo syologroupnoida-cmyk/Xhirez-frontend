@@ -53,12 +53,12 @@ const Shecancode = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <button onClick={() => setShowForm(true)} className="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold shadow-2xl hover:bg-blue-600 transition-all">Join the Campaign</button>
-              <a href="/assets/brochures/shecancode_brochure.pdf" download="shecancode_brochure.pdf" className="bg-white border border-slate-200 text-slate-900 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all text-center inline-block">Download Brochure</a>
+              <a href="/assets/brochures/SheCanCode_brochure.pdf" download="SheCanCode_brochure.pdf" className="bg-white border border-slate-200 text-slate-900 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition-all text-center inline-block">Download Brochure</a>
             </div>
           </motion.div>
           <div className="relative group">
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-[3rem] blur-2xl opacity-10 group-hover:opacity-20 transition-opacity"></div>
-            <img src="/assets/images/shecancode/background.jpg" className="relative rounded-[3rem] shadow-xl z-10 grayscale-[30%] hover:grayscale-0 transition-all duration-700" alt="Workshops" />
+            <img src="/assets/images/SheCanCode/background.jpg" className="relative rounded-[3rem] shadow-xl z-10 grayscale-[30%] hover:grayscale-0 transition-all duration-700" alt="Workshops" />
           </div>
         </div>
       </section>
@@ -126,7 +126,7 @@ const Shecancode = () => {
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl"></div>
             <h3 className="text-2xl font-bold mb-8 italic">Candidate Testimonial</h3>
             <p className="text-xl leading-relaxed text-slate-300 mb-8 italic">
-              "As an Arts & Humanities graduate, I never thought coding was for me. But within a month, I confidently created a landing page from scratch. The community at She Can Code is empowering and transformative."
+              "As an Arts & Humanities graduate, I never thought coding was for me. But within a month, I confidently created a landing page from scratch. The community at SheCanCode is empowering and transformative."
             </p>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center font-bold">AS</div>

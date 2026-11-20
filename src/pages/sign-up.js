@@ -1,14 +1,12 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
+import React from "react";
+import dynamic from "next/dynamic";
 
-const SignUpPage = dynamic(() => import('../views/signup/SignUp'), { ssr: false });
+const SignUp = dynamic(() => import("../views/signup/signUp"), { ssr: false });
 
-function SignUpPagePage() {
+export default function SignUpPage() {
   return (
     <div>
-      <SignUpPage />
+      <SignUp />
     </div>
   );
 }
-
-export default SignUpPagePage;

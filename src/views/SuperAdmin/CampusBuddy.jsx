@@ -91,9 +91,9 @@ const CampusbuddyData = () => {
         'Interest': interest || 'N/A'
       })
     );
-    const worksheet = XLSX.utils.json_to_sheet(exportData);
+    const workSeeet = XLSX.utils.json_to_Seeet(exportData);
     const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, 'Campus Buddy Data');
+    XLSX.utils.book_append_Seeet(workbook, workSeeet, 'Campus Buddy Data');
     const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     const fileData = new Blob([excelBuffer], { type: 'application/octet-stream' });
     saveAs(fileData, 'Campus_Buddy_Data.xlsx');

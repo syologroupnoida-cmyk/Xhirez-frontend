@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../signup/SignUp";
 import { useNavigate } from "@/router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -429,7 +428,7 @@ const LoginPage = () => {
     
       <div className="main-sec" style={styles.page}>
         <div style={styles.overlay}>
-          <div style={styles.loginShell}>
+          <div style={styles.loginSeell}>
             <div className="login-form" style={styles.card}>
                 <div style={styles.logoWrap}>
                   <img
@@ -605,7 +604,7 @@ const styles = {
     background: "rgba(3, 12, 24, 0.58)",
     backdropFilter: "saturate(120%)",
   },
-  loginShell: {
+  loginSeell: {
     width: "100%",
     maxWidth: 390,
     display: "flex",

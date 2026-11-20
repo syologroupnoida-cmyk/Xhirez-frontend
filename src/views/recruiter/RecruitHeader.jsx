@@ -20,12 +20,12 @@ const offeringProducts = [
 ];
 
 export default function RecruitHeader() {
-  const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
+  const [iSeeaderScrolled, setISeeaderScrolled] = useState(false);
   const [isOfferOpen, setIsOfferOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsHeaderScrolled(window.scrollY > 24);
+      setISeeaderScrolled(window.scrollY > 24);
     };
 
     handleScroll();
@@ -36,7 +36,7 @@ export default function RecruitHeader() {
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        isHeaderScrolled ? "border-b border-slate-200 bg-white shadow-sm" : "bg-transparent"
+        iSeeaderScrolled ? "border-b border-slate-200 bg-white shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-4 py-3.5 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export default function RecruitHeader() {
               alt="Xhirez"
               width={190}
               height={56}
-              className={`h-11 w-auto object-contain transition ${isHeaderScrolled ? "" : "brightness-0 invert"}`}
+              className={`h-11 w-auto object-contain transition ${iSeeaderScrolled ? "" : "brightness-0 invert"}`}
             />
           </Link>
           <nav className="hidden items-center gap-6 text-sm font-medium lg:flex">
@@ -59,7 +59,7 @@ export default function RecruitHeader() {
               <button
                 type="button"
                 className={`inline-flex items-center whitespace-nowrap border-0 bg-transparent p-0 font-semibold ${
-                  isHeaderScrolled ? "text-slate-900" : "text-white"
+                  iSeeaderScrolled ? "text-slate-900" : "text-white"
                 }`}
               >
                 Our offerings
@@ -126,7 +126,7 @@ export default function RecruitHeader() {
         </div>
 
         <nav className="hidden items-center gap-4 text-sm font-semibold lg:flex">
-          <Link href="tel:18001025558" className={`${isHeaderScrolled ? "xh-recruit-light-link" : "xh-recruit-dark-link"} inline-flex items-center whitespace-nowrap`}>
+          <Link href="tel:18001025558" className={`${iSeeaderScrolled ? "xh-recruit-light-link" : "xh-recruit-dark-link"} inline-flex items-center whitespace-nowrap`}>
             <FontAwesomeIcon icon={faPhone} className="mr-2" />
             1800-102-5558 <FontAwesomeIcon icon={faChevronDown} className="ml-2 text-xs" />
           </Link>
@@ -139,7 +139,7 @@ export default function RecruitHeader() {
           <Link
             href="/job-post"
             className={`xh-recruit-header-action inline-flex items-center whitespace-nowrap rounded-md border px-4 py-2 text-sm font-semibold no-underline ${
-              isHeaderScrolled
+              iSeeaderScrolled
                 ? "border-slate-300 text-slate-900 hover:text-slate-900"
                 : "border-white/70 text-white hover:text-white"
             }`}
@@ -149,8 +149,8 @@ export default function RecruitHeader() {
               FREE
             </span>
           </Link>
-          <FontAwesomeIcon icon={faShoppingCart} className={`text-2xl ${isHeaderScrolled ? "text-slate-900" : "text-white"}`} />
-          <FontAwesomeIcon icon={faBars} className={`text-2xl ${isHeaderScrolled ? "text-slate-900" : "text-white"}`} />
+          <FontAwesomeIcon icon={faShoppingCart} className={`text-2xl ${iSeeaderScrolled ? "text-slate-900" : "text-white"}`} />
+          <FontAwesomeIcon icon={faBars} className={`text-2xl ${iSeeaderScrolled ? "text-slate-900" : "text-white"}`} />
         </nav>
       </div>
     </header>

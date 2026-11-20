@@ -1,150 +1,155 @@
-import React, { useState, useEffect } from "react";
-import { Container, Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocationDot, faBriefcase, faLocationCrosshairs,
-  faArrowRight, faGraduationCap, faCode, faUserGroup, faCompass
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faLocationCrosshairs } from "@fortawesome/free-solid-svg-icons";
 
-const HeroSection = ({ query, location, handleInputChange, handlePostChange, handleSearch, detectLocation, suggestions, keywords, setQuery }) => {
-  const [index, setIndex] = useState(0);
+const EXPERIENCE = [
+  { label: "Fresher", value: "0" },
+  { label: "1 - 2 years", value: "1-2" },
+  { label: "3 - 5 years", value: "3-5" },
+  { label: "6 - 10 years", value: "6-10" },
+  { label: "10+ years", value: "10+" },
+];
 
-  const slides = [
-    {
-      title: "E-Campus",
-      heading: <>Learn & <span className="text-blue-400">Scale Up</span></>,
-      subtext: "Master new skills with our curated certification programs.",
-      bgImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
-      icon: faGraduationCap
-    },
-    {
-      title: "She Can Code",
-      heading: <>Women in <span className="text-pink-400">Technology</span></>,
-      subtext: "Exclusive mentorship and tech roles for women leaders.",
-      bgImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
-      icon: faCode
-    },
-    {
-      title: "Campus Buddy",
-      heading: <>Your <span className="text-orange-400">Campus Partner</span></>,
-      subtext: "Simplifying internships and first-jobs for students.",
-      bgImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop",
-      icon: faUserGroup
-    },
-    {
-      title: "Career Counselling",
-      heading: <>Navigate <span className="text-green-400">Your Future</span></>,
-      subtext: "Get expert guidance to choose the right career path.",
-      bgImage: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop",
-      icon: faCompass
-    }
-  ];
+/* Outline icons (same look as the reference) */
+const SearchIcon = () => (
+  <svg className="xh-hr-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b4a6b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7" /><line x1="16.5" y1="16.5" x2="21" y2="21" />
+  </svg>
+);
+const BriefcaseIcon = () => (
+  <svg className="xh-hr-ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7a7a88" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <rect x="3" y="7" width="18" height="13" rx="2" /><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" /><line x1="3" y1="13" x2="21" y2="13" />
+  </svg>
+);
+const PinIcon = () => (
+  <svg className="xh-hr-ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7a7a88" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" />
+  </svg>
+);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+/* Illustration (inline SVG, no external image needed) */
+const HeroArt = () => (
+  <svg className="xh-hr-art" viewBox="0 0 520 440" role="img" aria-label="Job search illustration">
+    <circle cx="270" cy="220" r="190" fill="#e3ecf1" />
+    <rect x="90" y="110" width="270" height="190" rx="14" fill="#fff" stroke="#cfdde6" />
+    <rect x="90" y="110" width="270" height="30" rx="14" fill="#1e7f66" />
+    {[0, 1, 2].map((i) => (
+      <g key={i} transform={`translate(110 ${160 + i * 44})`}>
+        <circle cx="14" cy="14" r="14" fill="#e8f1ee" />
+        <rect x="38" y="4" width="130" height="8" rx="4" fill="#9fb3c4" />
+        <rect x="38" y="18" width="90" height="7" rx="3.5" fill="#cfdce6" />
+        <rect x="200" y="6" width="56" height="20" rx="10" fill="#e3f3ec" />
+      </g>
+    ))}
+    <rect x="330" y="200" width="150" height="110" rx="12" fill="#fff" stroke="#cfdde6" />
+    <polyline points="345,285 380,255 405,270 440,230 468,215" fill="none" stroke="#1e7f66" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="400" cy="340" r="42" fill="none" stroke="#1f5eff" strokeWidth="10" />
+    <line x1="430" y1="370" x2="470" y2="410" stroke="#1f5eff" strokeWidth="12" strokeLinecap="round" />
+    <rect x="130" y="330" width="90" height="62" rx="10" fill="#ff7a45" />
+    <rect x="158" y="318" width="34" height="18" rx="6" fill="none" stroke="#ff7a45" strokeWidth="8" />
+    <rect x="130" y="354" width="90" height="6" fill="#e8622d" />
+    <polygon points="420,90 450,60 470,100" fill="#8ec9ff" />
+    <circle cx="90" cy="90" r="10" fill="#ffd166" />
+  </svg>
+);
+
+const HeroSection = ({
+  query,
+  location,
+  handleInputChange,
+  handlePostChange,
+  handleSearch,
+  detectLocation,
+  keywords = [],
+  setQuery,
+}) => {
+  const [experience, setExperience] = useState("");
 
   return (
-    <div id="hero" className="relative h-[560px] md:h-[620px] mt-[94px] overflow-hidden bg-black">
-      
-      {/* --- BACKGROUND IMAGES WITH SMOOTH CROSS-FADE --- */}
-      {slides.map((slide, i) => (
-        <div
-          key={i}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out ${
-            index === i ? "opacity-100 scale-105" : "opacity-0 scale-100"
-          }`}
-          style={{ 
-            backgroundImage: `url(${slide.bgImage})`,
-            transitionProperty: 'opacity, transform'
-          }}
-        >
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/65"></div>
-        </div>
-      ))}
+    <section id="hero" className="xh-hr">
+      <div className="xh-hr-inner">
+        <div className="xh-hr-left">
+          <p className="xh-hr-eyebrow">One Destination for</p>
+          <h1 className="xh-hr-title">Jobs, Skills &amp; Career Growth</h1>
 
-      <Container className="relative z-20 h-full flex flex-col justify-center items-center">
-        
-        {/* --- CONTENT WITH FADE-IN ANIMATION --- */}
-        <div 
-          key={`content-${index}`} 
-          className="text-center max-w-3xl mx-auto mb-10 animate-in fade-in zoom-in duration-1000"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md">
-            <FontAwesomeIcon icon={slides[index].icon} className="text-white text-xs" />
-            <span className="text-[11px] font-bold text-white uppercase tracking-[3px]">
-              {slides[index].title}
-            </span>
+          <div className="xh-hr-steps">
+            <span>Search</span><i /><span>Apply</span><i /><span>Get Hired</span><i /><span>Succeed</span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight">
-            {slides[index].heading}
-          </h1>
-          <p className="text-base text-gray-200 font-medium max-w-xl mx-auto opacity-90">
-            {slides[index].subtext}
-          </p>
-        </div>
+          <p className="xh-hr-sub">Find your next opportunity. For free!</p>
 
-        {/* --- STATIC SEARCH BAR --- */}
-        <div className="w-full max-w-3xl mx-auto">
-          <div className="xh-hero-search bg-white shadow-2xl border border-white/10">
-            <Form className="flex flex-col md:flex-row items-center gap-1">
-              
-              <div className="relative flex-[1.3] w-full">
-                <FontAwesomeIcon icon={faBriefcase} className="xh-search-icon absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" />
-                <Form.Control
-                  type="text"
-                  placeholder="Job title or Skills"
-                  value={query}
-                  onChange={handleInputChange}
-                  className="xh-search-input !border-none !shadow-none h-12 text-sm font-bold text-gray-700 bg-transparent"
-                />
-              </div>
+          {/* Search bar (same as reference) */}
+          <form
+            className="xh-hr-bar"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSearch(experience);
+            }}
+          >
+            {/* 1. skills */}
+            <div className="xh-hr-field xh-hr-field-skills">
+              <SearchIcon />
+              <input
+                type="text"
+                placeholder="Search jobs by 'skills'"
+                value={query}
+                onChange={handleInputChange}
+                aria-label="Search jobs by skills"
+              />
+            </div>
 
-              <div className="hidden md:block w-px h-8 bg-gray-200"></div>
-
-              <div className="relative flex-1 w-full">
-                <FontAwesomeIcon icon={faLocationDot} className="xh-search-icon absolute left-6 top-1/2 -translate-y-1/2 text-gray-400" />
-                <Form.Control
-                  type="text"
-                  placeholder="Location"
-                  value={location}
-                  onChange={handlePostChange}
-                  className="xh-search-input xh-search-input-location !border-none !shadow-none h-12 text-sm font-bold text-gray-700 bg-transparent"
-                />
-                <button type="button" onClick={detectLocation} className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-600 hover:scale-110 transition">
-                  <FontAwesomeIcon icon={faLocationCrosshairs} />
-                </button>
-              </div>
-
-              <Button 
-                onClick={handleSearch}
-                className="w-full md:w-auto px-10 h-12 !bg-blue-600 hover:!bg-blue-700 !rounded-full !border-none font-bold text-base shadow-lg transition-all"
+            {/* 2. experience */}
+            <div className="xh-hr-field xh-hr-field-exp">
+              <BriefcaseIcon />
+              <select
+                value={experience}
+                onChange={(e) => setExperience(e.target.value)}
+                aria-label="Your experience"
+                required
               >
-                Search <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-xs" />
-              </Button>
-            </Form>
-          </div>
+                <option value="" disabled hidden>Experience</option>
+                {EXPERIENCE.map((x) => (
+                  <option key={x.value} value={x.value}>{x.label}</option>
+                ))}
+              </select>
+              <FontAwesomeIcon icon={faChevronDown} className="xh-hr-chev" />
+            </div>
 
-          {/* Trending Tags */}
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {keywords.slice(0, 4).map((kw, i) => (
+            {/* 3. area / city */}
+            <div className="xh-hr-field xh-hr-field-loc">
+              <PinIcon />
+              <input
+                type="text"
+                placeholder="Search for a city"
+                value={location}
+                onChange={handlePostChange}
+                aria-label="Search for a city"
+              />
               <button
-                key={i}
-                onClick={() => setQuery(kw)}
-                className="xh-hero-keyword px-4 py-1.5 bg-white/5 border border-white/10 text-xs font-bold text-white hover:bg-white hover:text-black transition-all backdrop-blur-sm"
+                type="button"
+                className="xh-hr-loc"
+                onClick={detectLocation}
+                aria-label="Detect my location"
               >
+                <FontAwesomeIcon icon={faLocationCrosshairs} />
+              </button>
+            </div>
+
+            <button type="submit" className="xh-hr-btn">Search jobs</button>
+          </form>
+
+          <div className="xh-hr-chips">
+            {keywords.slice(0, 4).map((kw) => (
+              <button key={kw} type="button" className="xh-hr-chip" onClick={() => setQuery(kw)}>
                 {kw}
               </button>
             ))}
           </div>
         </div>
-      </Container>
-    </div>
+
+        <HeroArt />
+      </div>
+    </section>
   );
 };
 

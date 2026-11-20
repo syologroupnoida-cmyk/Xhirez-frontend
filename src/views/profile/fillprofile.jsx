@@ -995,7 +995,7 @@
 //               className="w-full p-2 border rounded-md"
 //             >
 //               <option value="">Select Category</option>
-//               <option value="fresher">Fresher</option>
+//               <option value="freSeer">FreSeer</option>
 //               <option value="experienced">Experienced</option>
 //             </select>
 //           </div>
@@ -2671,7 +2671,7 @@ const Fillprofile = () => {
               className="w-full p-2 border rounded-md"
             >
               <option value="">Select Category</option>
-              <option value="fresher">Fresher</option>
+              <option value="freSeer">FreSeer</option>
               <option value="experienced">Experienced</option>
             </select>
           </div>

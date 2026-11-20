@@ -613,7 +613,7 @@ const AdvanceSearch = () => {
                         onChange={handleInputChange}
                       >
                         <option value="">Select Experience</option>
-                        <option value="0">Fresher</option>
+                        <option value="0">FreSeer</option>
                         <option value="1">1+ Years</option>
                         <option value="2">2+ Years</option>
                         <option value="3">3+ Years</option>

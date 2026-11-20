@@ -47,7 +47,7 @@ const initialForm = {
   mobile: "",
   password: "",
   confirmPassword: "",
-  workStatus: "fresher",
+  workStatus: "freSeer",
   currentCity: "",
   keySkills: [],
   preferredRole: "",
@@ -491,20 +491,42 @@ export default function SignUpPage() {
   };
 
   const completeRegistration = async () => {
-    if (!isOtpVerified) {
-      setActiveStep(1);
-      setErrors((current) => ({ ...current, otp: `Verify email with dummy OTP ${DUMMY_OTP}` }));
-      return;
-    }
+  if (!isOtpVerified) {
+    setActiveStep(1);
+    setErrors((current) => ({ ...current, otp: `Verify email with dummy OTP ${DUMMY_OTP}` }));
+    return;
+  }
 
-    if (!validateCompletion()) return;
+  if (!validateCompletion()) return;
 
-    setLoading("register");
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    showMessage("Profile completed successfully");
-    setLoading("");
-    setTimeout(() => navigate("/profile-dashboard"), 700);
+  setLoading("register");
+  await new Promise((resolve) => setTimeout(resolve, 500));
+
+  // save the new user so the dashboard can read it
+  const users = {
+    id: Date.now(),
+    fullName: formData.fullName.trim(),
+    email: formData.email.trim(),
+    phoneNo: formData.mobile,
+    location: formData.currentCity || "",
+    education: [],
+    skills: [],
+    workExperience: [],
+    userRole: "user",
+    createdAt: new Date().toISOString(),
   };
+  const authPayload = JSON.stringify({ users, fullName: users.fullName });
+  try {
+    localStorage.setItem("authToken", authPayload);
+    sessionStorage.setItem("authToken", authPayload);
+  } catch (e) {
+    console.error("Could not store session", e);
+  }
+
+  showMessage("Profile completed successfully");
+  setLoading("");
+  setTimeout(() => navigate("/profile-dashboard"), 700);
+};
 
   const handleNext = () => {
     if (activeStep === 0) {
@@ -671,7 +693,7 @@ export default function SignUpPage() {
                     <Stack spacing={2}>
                       <Grid container spacing={0} sx={twoColumnGrid}>
                         {[
-                          { value: "fresher", title: "I am a fresher", icon: <SchoolOutlined />, note: "Student or no full-time experience" },
+                          { value: "freSeer", title: "I am a freSeer", icon: <SchoolOutlined />, note: "Student or no full-time experience" },
                           { value: "experienced", title: "I have experience", icon: <Work />, note: "Worked after graduation" },
                         ].map((option) => (
                           <Grid item xs={12} sm={6} key={option.value}>
@@ -1083,7 +1105,7 @@ export default function SignUpPage() {
                               width: "100%",
                               minHeight: 42,
                               justifyContent: "flex-start",
-                              borderStyle: "dashed",
+                              borderStyle: "daSeed",
                               borderRadius: 2,
                               textTransform: "none",
                               gridColumn: { md: "span 3" },

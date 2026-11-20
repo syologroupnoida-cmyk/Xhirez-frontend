@@ -4,8 +4,8 @@ const Navlinks = () => {
   const links = [
     { name: "Campus Buddy", url: "/campus-buddy" },
     { name: "She Can Code", url: "/shecancode" },
-     { name: "E-Campus", url: "/business" },
-    { name: "Career Counselling", url: "/career-counselling" }, 
+    { name: "E-Campus", url: "/business" },
+    { name: "Career Counselling", url: "/career-counselling" },
   ];
   
   const location = useLocation();

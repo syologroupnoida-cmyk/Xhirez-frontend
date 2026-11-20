@@ -1,14 +1,14 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 
-const Shecancode = dynamic(() => import('../views/shecancode/shecancode'), { ssr: false });
+const SheCanCode = dynamic(() => import('../views/SheCanCode/SheCanCode'), { ssr: false });
 
-function ShecancodePage() {
+function SheCanCodePage() {
   return (
     <div>
-      <Shecancode />
+      <SheCanCode />
     </div>
   );
 }
 
-export default ShecancodePage;
+export default SheCanCodePage;

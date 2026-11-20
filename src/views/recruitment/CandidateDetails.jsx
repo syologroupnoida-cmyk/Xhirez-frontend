@@ -438,7 +438,7 @@ const CandidateDetails = () => {
                   
 
                    
-                    {candidateDetails.userCategory === "fresher" ? (
+                    {candidateDetails.userCategory === "freSeer" ? (
                       <div className="user-card" style={{ minHeight: "200px" }}>
                         <h6>
                           <FontAwesomeIcon className="pro-icon" icon={faCode} />

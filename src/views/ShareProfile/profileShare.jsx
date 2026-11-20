@@ -312,7 +312,7 @@ const ProfileShare = () => {
                       <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
                       Experience
                     </h4>
-                    {candidateDetails.userCategory === 'fresher' ? (
+                    {candidateDetails.userCategory === 'freSeer' ? (
                       <div className="user-card" style={{ minHeight: '200px' }}>
                         <h6>
                           <FontAwesomeIcon className="pro-icon" icon={faCode} />

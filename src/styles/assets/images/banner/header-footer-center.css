@@ -1,0 +1,92 @@
+/* Centre-aligns the header. Selectors are prefixed with .xh-center so they
+   win over your existing .xh-tb-* rules without !important. */
+
+/* Promo strip: text + button centred, close button pinned to the right */
+.xh-tb-header.xh-center .xh-tb-promo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  text-align: center;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.xh-tb-header.xh-center .xh-tb-promo-close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Nav: logo on top, links + actions on one centred row below */
+.xh-tb-header.xh-center .xh-tb-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 8px;
+}
+.xh-tb-header.xh-center .xh-tb-logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.xh-tb-header.xh-center .xh-tb-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  width: 100%;
+}
+.xh-tb-header.xh-center .xh-tb-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.xh-tb-header.xh-center .xh-tb-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Dropdown panels open centred under their trigger */
+.xh-tb-header.xh-center .xh-tb-drop { position: relative; }
+.xh-tb-header.xh-center .xh-tb-drop-menu {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Burger (mobile): keep it out of the way in the top-right corner */
+.xh-tb-header.xh-center .xh-tb-burger {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+}
+
+/* Mobile menu */
+.xh-tb-header.xh-center .xh-tb-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* On phones the desktop link row is hidden; centred logo + burger remain. */
+@media (max-width: 991px) {
+  .xh-tb-header.xh-center .xh-tb-row { display: none; }
+}
